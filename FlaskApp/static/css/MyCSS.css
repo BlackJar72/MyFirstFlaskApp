@@ -1,0 +1,40 @@
+		header.my_header {
+			text-align: center;
+			color: #ffdd30;
+			background-color:#4040E0;
+			width: 100%;
+			height: 20%;
+			padding: 32px;
+		}
+	
+		nav.my_sidebar {
+			width: 20%;
+			height: 100%;
+			background-color: #A0A8C8;
+			color: #000000;
+			position: fixed;
+			overflow: auto;
+			float: left;
+			padding: 12px;
+			text-align: center;
+		}
+	
+		ul.my_navbar {
+			list-style-type: none;
+		}
+		
+		ul.my_sidebar {
+			list-style-type: none;
+		}
+		
+		section.my_main_section {
+			width: 80%;
+			float: right;
+			padding: 16px;
+		}
+		
+		footer.my_footer {			
+			width: 80%;
+			float: right;
+			padding: 64px;		
+		}
