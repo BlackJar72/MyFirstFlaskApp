@@ -27,10 +27,26 @@
 		}
 	
 		ul.my_navbar {
+			text-align: right;
 			list-style-type: none;
+			display: block;
+		}
+	
+		li.my_navbar {
+			list-style-type: none;
+			background-color: #303038;
+			display: inline;
+			padding: 8px;
+			margin: 8px;
+			border-radius: 8px;
+			float: right;
 		}
 		
 		ul.my_sidebar {
+			list-style-type: none;
+		}
+	
+		li.my_sidebar {
 			list-style-type: none;
 		}
 		
