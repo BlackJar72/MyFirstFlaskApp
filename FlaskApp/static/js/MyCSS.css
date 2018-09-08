@@ -3,14 +3,9 @@
 			color: #ffdd30;
 			background-color:#4040E0;
 			width: 100%;
-			max-height: 96px;
-			min-height: 96px;
-			/*height: 20%;
-			min-height: 128px;			
-			padding: 32px;*/
-			overflow: hidden;
-			position: fixed;
-			top: 0;
+			height: 20%;
+			min-height: 128px;
+			padding: 32px;
 		}
 	
 		nav.my_sidebar {
@@ -22,8 +17,7 @@
 			float: left;
 			padding: 12px;
 			text-align: center;
-			position: fixed;
-			top: 96px;
+			position: absolute;
 		}
 	
 		ul.my_navbar {
@@ -38,7 +32,6 @@
 			width: 75%;
 			float: right;
 			padding: 16px;
-			margin-top: 80px;
 		}
 		
 		footer.my_footer {			
