@@ -12,30 +12,18 @@
 <head>
 
 <body>
-
-<header class="my_header">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-	<a class="navbar-brand" href="/flask/">
-	  <img style="max-width:44px; margin-top: 8px; float: left;" src="{{ url_for('static', filename='img/crown.png') }}">
-	</a>
-      </div>
-
-      <a href="/flask/dashboard/"><button type="button" class="btn btn-primary" aria-label="Left Align" 
-	  style="margin-top: 8px; margin-bottom: 5px; height: 44px; margin-right: 15px">
-	<span class="glyphicon glyphicon-off" aria-hidden="true"></span>Welcome!
-      </button></a>
-      <div style="margin-right: 10px; margin-left: 15px; margin-top: 5px; margin-bottom: 5px;"  
-	  class="container-fluid">	
-      </div>
-    </div>
-
-	<h1 style="text-align: center; font-size: 32px;">Hello, welcome to the page!</h1>
-    
-    
-  </nav>
-</header>
+  <header class="my_header">
+    <nav class="my_navbar">
+      <ul class="my_navbar">
+	<li class="my_navbar" style="float: left;">
+	  <img style="float: left;" src="{{ url_for('static', filename='img/crown.png') }}"></li>
+	<li class="my_navbar">Not Really a Link</li>
+	<li class="my_navbar">Also Not a Link</li>
+	<li class="my_navbar">Still Not a Link</li>
+      </ul>
+    </nav>
+    <h1 class="my_header">Knight Ferret!</h1>
+  </header>
 
 	<nav class="my_sidebar">
 		<!--TODO-->
