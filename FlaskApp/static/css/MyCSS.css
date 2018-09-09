@@ -62,3 +62,31 @@
 			float: right;
 			padding: 64px;		
 		}
+		
+		.my_dropper {
+			/*position: relative;*/
+			display: inline-block;
+		}
+		
+		.my_dropdown {
+			display: none;
+			position: fixed;
+			background-color: #C0C8ff;
+			/*min-width: 160ps;*/
+			border: 2px solid black;
+			padding: 0;
+			z-index: 1;
+			top: 58px;
+		}
+		
+		.my_dropper:hover .my_dropdown {
+			display: block;
+		}
+		
+		.my_dropped_item {
+			list-style-type: none;
+			color: black;
+			text-align: left;
+			border: 1px solid black;
+			padding: 8px;
+		}
