@@ -13,16 +13,49 @@
 
 <body>
   <header class="my_header">
+    <img style="float: left; padding: 12px;" src="{{ url_for('static', filename='img/FerretR.png') }}">
+    <h1 class="my_navbar">Knight Ferret!</h1>
     <nav class="my_navbar">
       <ul class="my_navbar">
-	<li style="float: left; padding: 0; margin: 0;">
-	  <img style="float: left;" src="{{ url_for('static', filename='img/FerretR.png') }}"></li>
-	<li class="my_navbar">Not Really a Link</li>
-	<li class="my_navbar">Also Not a Link</li>
-	<li class="my_navbar">Still Not a Link</li>
+	<div class="my_dropper">
+	  <li class="my_navbar">Software Development</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Open Source</li>
+	      <li class="my_dropped_item">Desktop App</li>
+	      <li class="my_dropped_item">Games / Mods</li>
+	      <li class="my_dropped_item"><a href="https://github.com/BlackJar72" class="my_dropdown_link" target="_new">GitHub (external)</a></li>
+	      <hr class="my_droplist_div" />
+	      <li class="my_dropped_item">Resume</li>
+	      <li class="my_dropped_item">Hire Me</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Just for Fun</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">More Stuff</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Personal</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Poetry</li>
+	      <li class="my_dropped_item">Art</li>
+	      <li class="my_dropped_item">Music</li>
+	      <li class="my_dropped_item">Bio</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Sign-Up</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">More Stuff</li>
+	    </div>
+	</div>
       </ul>
     </nav>
-    <h1 class="my_header">Knight Ferret!</h1>
   </header>
 
 	<nav class="my_sidebar">
