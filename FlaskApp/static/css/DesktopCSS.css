@@ -11,7 +11,7 @@
 		}
 	
 		nav.my_sidebar {
-			width: 20%;
+			width: 180px;
 			height: 100%;
 			background-color: #A0A8C8;
 			color: #000000;
@@ -64,10 +64,10 @@
 		}
 		
 		section.my_main_section {
-			width: 75%;
-			float: right;
+			max-width: 70%;
+			float: left;
 			padding: 16px;
-			margin-top: 80px;
+			margin: 80px 32px 16px 192px;
 		}
 		
 		footer.my_footer {			

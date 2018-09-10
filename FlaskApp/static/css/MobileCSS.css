@@ -15,16 +15,7 @@
 		}
 	
 		nav.my_sidebar {
-			width: 20%;
-			height: 100%;
-			background-color: #A0A8C8;
-			color: #000000;
-			overflow: auto;
-			float: left;
-			padding: 12px;
-			text-align: center;
-			position: fixed;
-			top: 96px;
+            display: none;
 		}
 	
 		ul.my_navbar {
@@ -68,8 +59,8 @@
 		}
 		
 		section.my_main_section {
-			width: 75%;
-			float: right;
+			max-width: 75%;
+			float: left;
 			padding: 16px;
 			margin-top: 80px;
 		}
