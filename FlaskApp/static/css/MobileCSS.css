@@ -112,3 +112,8 @@
 		.my_dropped_item:hover {
 			background-color: #8080ee;		  
 		}
+		
+		img.my_menu_ico {
+			float: right;
+			padding: 12px;
+		}

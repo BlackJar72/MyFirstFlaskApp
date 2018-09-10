@@ -6,7 +6,6 @@
   <meta name="description" content="My first Flask Site">
   <meta name="author" content="Jared Blackburn">  
   <title>Welcome to my Webpage</title>
-  <!--link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"-->
   <link href="{{ url_for('static', filename='css/CoreCSS.css') }}" rel="stylesheet"> 
   <link rel="shortcut icon" href="{{ url_for('static', filename='crown.png') }}">
 <head>
@@ -15,6 +14,7 @@
   <header class="my_header">
     <img style="float: left; padding: 12px;" src="{{ url_for('static', filename='img/FerretR.png') }}">
     <h1 class="my_navbar">Knight Ferret!</h1>
+    <img class="my_menu_ico" style="float: right; padding: 12px;" src="{{ url_for('static', filename='img/MenuIco.png') }}">
     <nav class="my_navbar">
       <ul class="my_navbar">
 	<div class="my_dropper">
