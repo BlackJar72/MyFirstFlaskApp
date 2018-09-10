@@ -1,0 +1,125 @@
+/*
+ * TODO / FIXME: This is just a copy of the desktop style; 
+ * modify to make appropraite small screen sytle!
+ */
+		header.my_header {
+			text-align: center;
+			color: #ffdd30;
+			background-color:#4040E0;
+			width: 100%;
+			max-height: 96px;
+			min-height: 96px;
+			overflow: hidden;
+			position: fixed;
+			top: 0;
+		}
+	
+		nav.my_sidebar {
+			width: 20%;
+			height: 100%;
+			background-color: #A0A8C8;
+			color: #000000;
+			overflow: auto;
+			float: left;
+			padding: 12px;
+			text-align: center;
+			position: fixed;
+			top: 96px;
+		}
+	
+		ul.my_navbar {
+			text-align: right;
+			list-style-type: none;
+			display: block;
+		}
+	
+		h1.my_navbar {
+			text-align: center;
+			float: left;
+			list-style-type: none;
+			display: inline-block;
+			font-size: 32px;
+			padding: 0px 32px 0px 32px;
+		}
+	
+		li.my_navbar {
+			list-style-type: none;
+			background-color: #303038;
+			display: inline;
+			padding: 8px;
+			margin: 8px;
+			border-radius: 8px;
+			float: right;
+		}
+	
+		li.my_navbar:hover {
+			border-radius: 0;
+			float: right;
+			margin: 6px;
+			border: 2px solid black;
+		}
+		
+		ul.my_sidebar {
+			list-style-type: none;
+		}
+	
+		li.my_sidebar {
+			list-style-type: none;
+		}
+		
+		section.my_main_section {
+			width: 75%;
+			float: right;
+			padding: 16px;
+			margin-top: 80px;
+		}
+		
+		footer.my_footer {			
+			width: 80%;
+			float: right;
+			padding: 64px;		
+		}
+		
+		.my_dropper {
+			display: inline-block;
+		}
+		
+		.my_dropdown {
+			display: none;
+			position: fixed;
+			background-color: #C0C8ff;
+			margin-left: 6px;
+			border: 2px solid black;
+			padding: 0;
+			z-index: 1;
+			top: 58px;
+		}
+		
+		.my_dropper:hover .my_dropdown {
+			display: block;
+		}
+		
+		.my_dropped_item {
+			list-style-type: none;
+			color: black;
+			text-align: left;
+			border: 1px solid black;
+			padding: 8px;
+		}
+		
+		.my_droplist_div {
+			color: black;
+			text-align: left;
+			border: 2px solid black;
+			padding: 0;
+			margin: 1px 0px 1px 0px;		}
+		
+		a.my_dropdown_link {
+			color: black;
+			text-align: left;
+			text-decoration: none;
+		}
+		
+		.my_dropped_item:hover {
+			background-color: #8080ee;		  
+		}
