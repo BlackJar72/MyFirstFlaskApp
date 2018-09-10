@@ -27,6 +27,9 @@
 			text-align: right;
 			list-style-type: none;
 			display: block;
+			font-size: 14px;
+			margin-top: 0px;
+			margin-right: 8px;
 		}
 	
 		h1.my_navbar {
@@ -40,19 +43,19 @@
 	
 		li.my_navbar {
 			list-style-type: none;
-			background-color: #303038;
+			background-color: #303048;
 			display: inline;
-			padding: 8px;
-			margin: 8px;
-			border-radius: 8px;
+			padding: 4px;
+			margin: 0px;
 			float: right;
+			border: 2px solid black;
 		}
 	
 		li.my_navbar:hover {
+			background-color: #202030;
 			border-radius: 0;
 			float: right;
-			margin: 6px;
-			border: 2px solid black;
+			margin: 0px;
 		}
 		
 		ul.my_sidebar {
@@ -67,7 +70,7 @@
 			max-width: 70%;
 			float: left;
 			padding: 16px;
-			margin: 80px 32px 16px 192px;
+			margin: 80px 32px 16px 208px;
 		}
 		
 		footer.my_footer {			
@@ -84,11 +87,11 @@
 			display: none;
 			position: fixed;
 			background-color: #C0C8ff;
-			margin-left: 6px;
+			margin-left: 0px;
 			border: 2px solid black;
 			padding: 0;
 			z-index: 1;
-			top: 58px;
+			top: 26px;
 		}
 		
 		.my_dropper:hover .my_dropdown {
@@ -101,6 +104,7 @@
 			text-align: left;
 			border: 1px solid black;
 			padding: 8px;
+			font-size: 14px;
 		}
 		
 		.my_droplist_div {
@@ -118,4 +122,8 @@
 		
 		.my_dropped_item:hover {
 			background-color: #8080ee;		  
+		}
+		
+		img.my_menu_ico {
+			display: none;
 		}

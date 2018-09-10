@@ -15,13 +15,11 @@
 		}
 	
 		nav.my_sidebar {
-            display: none;
+			display: none;
 		}
 	
 		ul.my_navbar {
-			text-align: right;
-			list-style-type: none;
-			display: block;
+			display: none;
 		}
 	
 		h1.my_navbar {
@@ -35,19 +33,19 @@
 	
 		li.my_navbar {
 			list-style-type: none;
-			background-color: #303038;
+			background-color: #303048;
 			display: inline;
-			padding: 8px;
-			margin: 8px;
-			border-radius: 8px;
+			padding: 4px;
+			margin: 0px;
 			float: right;
+			border: 2px solid black;
 		}
 	
 		li.my_navbar:hover {
+			background-color: #202030;
 			border-radius: 0;
 			float: right;
-			margin: 6px;
-			border: 2px solid black;
+			margin: 0px;
 		}
 		
 		ul.my_sidebar {
@@ -59,7 +57,7 @@
 		}
 		
 		section.my_main_section {
-			max-width: 75%;
+			max-width: 100%;
 			float: left;
 			padding: 16px;
 			margin-top: 80px;
@@ -79,11 +77,11 @@
 			display: none;
 			position: fixed;
 			background-color: #C0C8ff;
-			margin-left: 6px;
+			margin-left: 0px;
 			border: 2px solid black;
 			padding: 0;
 			z-index: 1;
-			top: 58px;
+			top: 26px;
 		}
 		
 		.my_dropper:hover .my_dropdown {

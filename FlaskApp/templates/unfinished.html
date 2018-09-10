@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="My first Flask Site">
+  <meta name="author" content="Jared Blackburn">  
+  <title>Welcome to my Webpage</title>
+  <!--link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"-->
+  <link href="{{ url_for('static', filename='css/CoreCSS.css') }}" rel="stylesheet"> 
+  <link rel="shortcut icon" href="{{ url_for('static', filename='crown.png') }}">
+<head>
+
+<body>
+  <header class="my_header">
+    <img style="float: left; padding: 12px;" src="{{ url_for('static', filename='img/FerretR.png') }}">
+    <h1 class="my_navbar">Knight Ferret!</h1>    
+    <img style="float: right; padding: 12px;" src="{{ url_for('static', filename='img/FerretR.png') }}">
+    <nav class="my_navbar">
+      <ul class="my_navbar">
+	<div class="my_dropper">
+	  <li class="my_navbar">Software Development</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Open Source</li>
+	      <li class="my_dropped_item">Desktop App</li>
+	      <li class="my_dropped_item">Games / Mods</li>
+	      <li class="my_dropped_item"><a href="https://github.com/BlackJar72" class="my_dropdown_link" target="_new">GitHub (external)</a></li>
+	      <hr class="my_droplist_div" />
+	      <li class="my_dropped_item">Resume</li>
+	      <li class="my_dropped_item">Hire Me</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Just for Fun</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">More Stuff</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Personal</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Poetry</li>
+	      <li class="my_dropped_item">Art</li>
+	      <li class="my_dropped_item">Music</li>
+	      <li class="my_dropped_item">Bio</li>
+	    </div>
+	</div>
+	<div class="my_dropper">
+	  <li class="my_navbar">Sign-Up</li>
+	    <div class="my_dropdown">
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">Stuff</li>
+	      <li class="my_dropped_item">More Stuff</li>
+	    </div>
+	</div>
+      </ul>
+    </nav>
+  </header>
+
+	<nav class="my_sidebar">
+		<!--TODO-->
+		<em><strong style="font-size: 20px">TODO:</strong></em><br />	
+		<em>Add content!</em>
+	</nav>
+
+	<section class="my_main_section">
+		<center>
+		  <img src="{{ url_for('static', filename='img/ConstCaution01.png') }}">
+		  <h1>Under Constructions</h1>
+		  <p>This page is not complete (possibly not even started); 
+		  come back later to see actual content.</p>		
+		  <img src="{{ url_for('static', filename='img/ConstCaution01.png') }}">
+		</center>
+	</section>
+
+
+
+
+<!--Canned Scripts-->
+
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+
+</body>
+</html>

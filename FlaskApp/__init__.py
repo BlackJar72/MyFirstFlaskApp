@@ -3,8 +3,12 @@ import sys
 
 app = Flask(__name__)
 
+def underConstruction():
+  return render_template("unfinished.html")
+
 @app.route('/flask/')
 def homepage():
+    #return underConstruction()
     return render_template("main.html")
 
 if __name__ == "__main__":
