@@ -6,7 +6,9 @@
   <meta name="description" content="My first Flask Site">
   <meta name="author" content="Jared Blackburn">  
   <title>Welcome to my Webpage</title>
-  <link href="{{ url_for('static', filename='css/CoreCSS.css') }}" rel="stylesheet"> 
+  <link href="{{ url_for('static', filename='css/DesktopCSS.css') }}" rel="stylesheet" media="only screen and (min-width: 1024px)"> 
+  <link href="{{ url_for('static', filename='css/MobileCSS.css') }}" rel="stylesheet" media=" only screen and (max-width: 1023px) and (min-width: 600px)"> 
+  <link href="{{ url_for('static', filename='css/TinyCSS.css') }}" rel="stylesheet" media=" only screen and (max-width: 599px)"> 
   <link rel="shortcut icon" href="{{ url_for('static', filename='crown.png') }}">
 <head>
 

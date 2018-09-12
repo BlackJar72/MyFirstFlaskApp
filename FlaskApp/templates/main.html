@@ -6,15 +6,18 @@
   <meta name="description" content="My first Flask Site">
   <meta name="author" content="Jared Blackburn">  
   <title>Welcome to my Webpage</title>
-  <link href="{{ url_for('static', filename='css/CoreCSS.css') }}" rel="stylesheet"> 
+  <link href="{{ url_for('static', filename='css/DesktopCSS.css') }}" rel="stylesheet" media="only screen and (min-width: 1024px)"> 
+  <link href="{{ url_for('static', filename='css/MobileCSS.css') }}" rel="stylesheet" media=" only screen and (max-width: 1023px) and (min-width: 600px)"> 
+  <link href="{{ url_for('static', filename='css/TinyCSS.css') }}" rel="stylesheet" media=" only screen and (max-width: 599px)"> 
   <link rel="shortcut icon" href="{{ url_for('static', filename='crown.png') }}">
 <head>
 
 <body>
   <header class="my_header">
-    <img style="float: left; padding: 12px;" src="{{ url_for('static', filename='img/FerretR.png') }}">
+    <img class="my_ferret_ico" src="{{ url_for('static', filename='img/FerretR.png') }}">
+    <img class="my_menu_ico" src="{{ url_for('static', filename='img/MenuIco.png') }}">
     <h1 class="my_navbar">Knight Ferret!</h1>
-    <img class="my_menu_ico" style="float: right; padding: 12px;" src="{{ url_for('static', filename='img/MenuIco.png') }}">
+    <img class="my_ferret_text" src="{{ url_for('static', filename='img/FerretRText.png') }}">
     <nav class="my_navbar">
       <ul class="my_navbar">
 	<div class="my_dropper">

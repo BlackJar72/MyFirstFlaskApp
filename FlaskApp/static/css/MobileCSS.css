@@ -114,6 +114,15 @@
 		}
 		
 		img.my_menu_ico {
-			float: right;
+			float: left;
 			padding: 12px;
+		}
+		
+		img.my_ferret_ico {
+			float: right; 
+			padding: 12px;
+		}
+		
+		img.my_ferret_text {
+			display: none;
 		}

@@ -1,3 +1,7 @@
+/*
+ * TODO / FIXME: This is just a copy of the desktop style; 
+ * modify to make appropraite small screen sytle!
+ */
 		header.my_header {
 			text-align: center;
 			color: #ffdd30;
@@ -11,34 +15,15 @@
 		}
 	
 		nav.my_sidebar {
-			width: 180px;
-			height: 100%;
-			background-color: #A0A8C8;
-			color: #000000;
-			overflow: auto;
-			float: left;
-			padding: 12px;
-			text-align: center;
-			position: fixed;
-			top: 96px;
+			display: none;
 		}
 	
 		ul.my_navbar {
-			text-align: right;
-			list-style-type: none;
-			display: block;
-			font-size: 14px;
-			margin-top: 0px;
-			margin-right: 8px;
+			display: none;
 		}
 	
 		h1.my_navbar {
-			text-align: center;
-			float: left;
-			list-style-type: none;
-			display: inline-block;
-			font-size: 32px;
-			padding: 0px 32px 0px 32px;
+			display: none;
 		}
 	
 		li.my_navbar {
@@ -67,10 +52,10 @@
 		}
 		
 		section.my_main_section {
-			max-width: 70%;
+			max-width: 100%;
 			float: left;
 			padding: 16px;
-			margin: 80px 32px 16px 208px;
+			margin-top: 80px;
 		}
 		
 		footer.my_footer {			
@@ -104,7 +89,6 @@
 			text-align: left;
 			border: 1px solid black;
 			padding: 8px;
-			font-size: 14px;
 		}
 		
 		.my_droplist_div {
@@ -125,16 +109,15 @@
 		}
 		
 		img.my_menu_ico {
-			display: none;
-		}
-		
-		img.my_ferret_ico {
-			float: left; 
+			float: left;
 			padding: 12px;
 		}
 		
-		img.my_ferret_text {
-			display: none;
+		img.my_ferret_ico {
+			display: none;		  
 		}
 		
-		
+		img.my_ferret_text {
+			float: right; 
+			padding: 12px;
+		}
