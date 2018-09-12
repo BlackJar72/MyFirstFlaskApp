@@ -114,6 +114,7 @@
 		}
 		
 		img.my_ferret_text {
+			max-width: 40%;
 			float: right; 
 			padding: 12px;
 		}
