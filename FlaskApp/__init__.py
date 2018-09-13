@@ -8,8 +8,35 @@ def underConstruction():
 
 @app.route('/')
 def homepage():
-    #return underConstruction()
     return render_template("main.html")
+
+@app.route('/projects/')
+def projpage():
+    return underConstruction()
+
+@app.route('/poetry/')
+def poempage():
+    return underConstruction()
+
+@app.route('/art/')
+def artpage():
+    return underConstruction()
+
+@app.route('/music/')
+def musicpage():
+    return underConstruction()
+
+@app.route('/bio/')
+def biopage():
+    return underConstruction()
+
+@app.route('/resume/')
+def resumepage():
+    return underConstruction()
+
+@app.route('/contact/')
+def contactpage():
+    return underConstruction()
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
