@@ -6,7 +6,7 @@ app = Flask(__name__)
 def underConstruction():
   return render_template("unfinished.html")
 
-@app.route('/flask/')
+@app.route('/')
 def homepage():
     #return underConstruction()
     return render_template("main.html")
