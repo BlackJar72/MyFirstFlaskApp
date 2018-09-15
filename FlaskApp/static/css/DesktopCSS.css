@@ -139,4 +139,12 @@
 			display: none;
 		}
 		
+		my_inline_header {
+			display: inline;
+			float: left;
+			font-size: 16px;
+			font-family: "Times New Roman", Times, serif;
+			font-style: bold;
+		}
+		
 		

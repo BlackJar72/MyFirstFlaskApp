@@ -12,7 +12,7 @@ def homepage():
 
 @app.route('/projects/')
 def projpage():
-    return underConstruction()
+    return render_template("projects.html")
 
 @app.route('/poetry/')
 def poempage():
