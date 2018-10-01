@@ -32,7 +32,7 @@ def biopage():
 
 @app.route('/resume/')
 def resumepage():
-    return underConstruction()
+    return render_template("resume.html")
 
 @app.route('/contact/')
 def contactpage():
