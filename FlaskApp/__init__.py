@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, url_for
 import sys
 
 app = Flask(__name__)
@@ -13,6 +13,14 @@ def homepage():
 @app.route('/projects/')
 def projpage():
     return render_template("projects.html")
+
+@app.route('/games/')
+def gamespage():
+    return redirect(url_for('projpage',_anchor='games'))
+
+@app.route('/desktop/')
+def desktoppage():
+    return redirect(url_for('projpage',_anchor='desktop'))
 
 @app.route('/poetry/')
 def poempage():
