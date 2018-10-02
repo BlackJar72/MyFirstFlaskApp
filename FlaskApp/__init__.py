@@ -45,6 +45,11 @@ def resumepage():
 @app.route('/contact/')
 def contactpage():
     return underConstruction()
+  
+@app.errorhandler(404)
+def handle404(e):
+  return render_template("404.html")
+
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
