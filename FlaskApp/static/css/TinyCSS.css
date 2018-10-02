@@ -1,128 +1,128 @@
-		header.my_header {
-			text-align: center;
-			color: #ffdd30;
-			background-color:#4040E0;
-			width: 100%;
-			max-height: 96px;
-			min-height: 96px;
-			overflow: hidden;
-			position: fixed;
-			top: 0;
-		}
-	
-		nav.my_sidebar {
-			display: none;
-		}
-	
-		ul.my_navbar {
-			display: none;
-		}
-	
-		h1.my_navbar {
-			display: none;
-		}
-	
-		li.my_navbar {
-			list-style-type: none;
-			background-color: #303048;
-			display: inline;
-			padding: 4px;
-			margin: 0px;
-			float: right;
-			border: 2px solid black;
-		}
-	
-		li.my_navbar:hover {
-			background-color: #202030;
-			border-radius: 0;
-			float: right;
-			margin: 0px;
-		}
-		
-		ul.my_sidebar {
-			list-style-type: none;
-		}
-	
-		li.my_sidebar {
-			list-style-type: none;
-		}
-		
-		section.my_main_section {
-			max-width: 100%;
-			float: left;
-			padding: 16px;
-			margin-top: 80px;
-		}
-		
-		footer.my_footer {			
-			width: 80%;
-			float: right;
-			padding: 64px;		
-		}
-		
-		.my_dropper {
-			display: inline-block;
-		}
-		
-		.my_dropdown {
-			display: none;
-			position: fixed;
-			background-color: #C0C8ff;
-			margin-left: 0px;
-			border: 2px solid black;
-			padding: 0;
-			z-index: 1;
-			top: 26px;
-		}
-		
-		.my_dropper:hover .my_dropdown {
-			display: block;
-		}
-		
-		.my_dropped_item {
-			list-style-type: none;
-			color: black;
-			text-align: left;
-			border: 1px solid black;
-			padding: 8px;
-		}
-		
-		.my_droplist_div {
-			color: black;
-			text-align: left;
-			border: 2px solid black;
-			padding: 0;
-			margin: 1px 0px 1px 0px;		}
-		
-		a.my_dropdown_link {
-			color: black;
-			text-align: left;
-			text-decoration: none;
-		}
-		
-		.my_dropped_item:hover {
-			background-color: #8080ee;		  
-		}
-		
-		img.my_menu_ico {
-			float: left;
-			padding: 12px;
-		}
-		
-		img.my_ferret_ico {
-			display: none;		  
-		}
-		
-		img.my_ferret_text {
-			max-width: 40%;
-			float: right; 
-			padding: 12px;
-		}
-		
-		my_inline_header {
-			display: inline;
-			float: left;
-			font-size: 16px;
-			font-family: "Times New Roman", Times, serif;
-			font-style: bold;
-		}
+header.my_header {
+    text-align: center;
+    color: #ffdd30;
+    background-color:#4040E0;
+    width: 100%;
+    max-height: 96px;
+    min-height: 96px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+}
+
+nav.my_sidebar {
+    display: none;
+}
+
+ul.my_navbar {
+    display: none;
+}
+
+h1.my_navbar {
+    display: none;
+}
+
+li.my_navbar {
+    list-style-type: none;
+    background-color: #303048;
+    display: inline;
+    padding: 4px;
+    margin: 0px;
+    float: right;
+    border: 2px solid black;
+}
+
+li.my_navbar:hover {
+    background-color: #202030;
+    border-radius: 0;
+    float: right;
+    margin: 0px;
+}
+
+ul.my_sidebar {
+    list-style-type: none;
+}
+
+li.my_sidebar {
+    list-style-type: none;
+}
+
+section.my_main_section {
+    max-width: 100%;
+    float: left;
+    padding: 16px;
+    margin-top: 80px;
+}
+
+footer.my_footer {			
+    width: 80%;
+    float: right;
+    padding: 64px;		
+}
+
+.my_dropper {
+    display: inline-block;
+}
+
+.my_dropdown {
+    display: none;
+    position: fixed;
+    background-color: #C0C8ff;
+    margin-left: 0px;
+    border: 2px solid black;
+    padding: 0;
+    z-index: 1;
+    top: 26px;
+}
+
+.my_dropper:hover .my_dropdown {
+    display: block;
+}
+
+.my_dropped_item {
+    list-style-type: none;
+    color: black;
+    text-align: left;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+.my_droplist_div {
+    color: black;
+    text-align: left;
+    border: 2px solid black;
+    padding: 0;
+    margin: 1px 0px 1px 0px;		}
+
+a.my_dropdown_link {
+    color: black;
+    text-align: left;
+    text-decoration: none;
+}
+
+.my_dropped_item:hover {
+    background-color: #8080ee;		  
+}
+
+img.my_menu_ico {
+    float: left;
+    padding: 12px;
+}
+
+img.my_ferret_ico {
+    display: none;		  
+}
+
+img.my_ferret_text {
+    max-width: 40%;
+    float: right; 
+    padding: 12px;
+}
+
+my_inline_header {
+    display: inline;
+    float: left;
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    font-style: bold;
+}

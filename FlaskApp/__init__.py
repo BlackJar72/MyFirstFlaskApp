@@ -32,7 +32,7 @@ def artpage():
 
 @app.route('/music/')
 def musicpage():
-    return underConstruction()
+    return render_template("music.html")
 
 @app.route('/bio/')
 def biopage():

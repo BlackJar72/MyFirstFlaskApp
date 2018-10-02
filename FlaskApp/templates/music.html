@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+
+  <section class="my_main_section">
+    <h1>Experiments in Music composition</h1>
+    
+    <p>Here is some music I've written while playing composer.  Its it all 
+    synthesized, and was mixed and mastered using Audacity.  Not that some 
+    of the music is not well written for the instruments its intended for; 
+    this is especially true of the clarinet, which I used frequently but 
+    knew nothing about how it was actually played.  Thus came I up with 
+    music that sound good from a machine but would be very hard for a real 
+    musician to actually play.  All music is copyright &copy; Jared Blackburn, 
+    2006-2008.</p>
+    
+    <p>Note: This page requies HTML 5 to work!  The music may not be playable 
+    with some older browsers.</p>
+
+    <h2>Pseduo-Clasical</h2>
+
+    <article>
+      <h3>The Mini-Symphony I</h3>
+      <p>This is piece writen for small orchestra, and has two movements. 
+      Early versions added two more movements, though these really added nothing new.
+      and later "Attainment" was placed as the final movement of three, but this 
+      also made no sense, as it was in a different style and for a larger and 
+      more modern orchestra.  Early arrangements were longer through the use of 
+      repeats to stretch it out. I let the first and second movement stand on their own 
+      now.
+      </p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/03-Minisymphony1M1.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio><br />
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/04-MinisymphonyIM2.mp3') }}"> 
+	Your browser is too old for the music, please update!
+      </audio></article>
+
+    <hr />
+
+    <article>
+      <h3>Fall</h3>
+      <p>This is a slow, peaceful, mildly sad tune, alternately titled 
+      "time alone" (the title was changed to mirror "Spring").
+      It was written for violin, clarinet, and flute.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/05-Fall.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+      <p>[<a href="https://www.scribd.com/doc/13994429/Fall-or-Time-Alone" target="_blank">Sheet Music on Scribd</a>]</P>
+    </article>
+
+    <hr />
+
+    <article>
+    <h3>Spring</h3>
+      <p>This is a lively (though mid-tempo) cheerful tune, written for violin, clarinet, 
+      and flute, with drums added to the back ground.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/06-Spring.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+      <p>[<a href="https://www.scribd.com/doc/13994428/Spring" target="_blank">Sheet Music on Scribd</a>]</P>
+    </article>
+
+    <hr />
+
+    <article>
+    <h3>The Canons I</h3>
+      <p>This contains two canonical sections, with different time intervals between then 
+      lines of music, each of which could be a complete round on its own.  The the longer 
+      of these is polyphonic and obvious, while the shorter is written to be heard as a 
+      series of cords.  They have then been fit together so that the shorter sound like 
+      a kind of bridge or chorous between versus.  Thus the name, this is not a canon, but 
+      the merging of two.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/02-Canons I.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+    </article>
+
+    <hr />
+
+    <article>
+    <h3>Attainment</h3>
+      <p>My "masterpiece," at least in so far as this was the highest level of mastery I 
+      attained at music composition.  This is arranged for a full modern orchestra.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/01-Attainment.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+      <p>[<a href="https://www.scribd.com/doc/13994830/Attainment-or-Excitement" target="_blank">Sheet Music on Scribd</a>]</P>
+    </article>
+
+    <hr />
+    
+    <h2>Pseudo-Rock/Metal</h2>
+
+    <article>
+    <h3>Thrashing Theme</h3>
+      <p>This was intended as game music for a hypothetical game.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/ThrashinTheme2.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+    </article>
+
+    <hr />
+
+    <article>
+    <h3>Metalhead March</h3>
+      <p>This was intended as game music for a hypothetical game.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/MilitaristicTheme1.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+    </article>
+
+    <hr />
+
+    <article>
+    <h3>Minisymphony I, Movement I, rock version</h3>
+      <p>This is the same music we started with at the beginning of this page, but 
+      now arranged for a rock band and re-synthesized in a hard rock style.</p>
+      <audio controls>
+	<source src="{{ url_for('static', filename='music/15-MovementI-Rock.mp3') }}">
+	Your browser is too old for the music, please update!
+      </audio>
+    </article>
+
+    <hr />
+
+  </section>
+{% endblock %}

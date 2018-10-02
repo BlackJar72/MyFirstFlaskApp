@@ -1,0 +1,15 @@
+
+header.my_header {
+    text-align: center;
+    color: #ffdd30;
+    background-color:#4040E0;
+    width: 100%;
+    max-height: 96px;
+    min-height: 96px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0px;
+}
+
+
