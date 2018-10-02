@@ -51,6 +51,7 @@ def handle404(e):
   return render_template("404.html")
 
 
+#Start the who thing running!!!
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
 
