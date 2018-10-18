@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 import sys, os
 
 app = Flask(__name__)
@@ -30,12 +30,12 @@ def desktoppage():
 
 @app.route('/poetry/', methods=['GET', 'POST'])
 def poempage():
-    if request.method = 'GET':
+    if request.method == 'GET':
       title = request.args.get('poem')
       if title != None:
-	return render_template('poetry.html', poem=fragdict[title])
-      else
-	return render_template('poetry.html', poem='')    
+        return render_template('poetry.html', poem=fragdict[title])
+      else:
+        return render_template('poetry.html', poem='')    
     return render_template('poetry.html', poem='')
 
 @app.route('/art/')
