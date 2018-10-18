@@ -6,7 +6,7 @@ app = Flask(__name__)
 fragnames = os.listdir("templates/frament")
 fragdict = {}
 for fname in fragnames: 
-  with open(fname, r) as f:
+  with open("templates/frament/" + fname, 'r') as f:
     fragdict[fname] = f.read()
 
 def underConstruction():
@@ -33,6 +33,7 @@ def poempage():
     if request.method == 'GET':
       title = request.args.get('poem')
       if title != None:
+        print(fragdict[title])
         return render_template('poetry.html', poem=fragdict[title])
       else:
         return render_template('poetry.html', poem='')    
