@@ -1,7 +1,13 @@
 from flask import Flask, render_template, redirect, url_for
-import sys
+import sys, os
 
 app = Flask(__name__)
+
+fragnames = os.listdir("templates/frament")
+fragdict = {}
+for fname in fragnames: 
+  with open(fname, r) as f:
+    fragdict[fname] = f.read()
 
 def underConstruction():
   return render_template("unfinished.html")
@@ -22,9 +28,15 @@ def gamespage():
 def desktoppage():
     return redirect(url_for('projpage',_anchor='desktop'))
 
-@app.route('/poetry/')
+@app.route('/poetry/', methods=['GET', 'POST'])
 def poempage():
-    return underConstruction()
+    if request.method = 'GET':
+      title = request.args.get('poem')
+      if title != None:
+	return render_template('poetry.html', poem=fragdict[title])
+      else
+	return render_template('poetry.html', poem='')    
+    return render_template('poetry.html', poem='')
 
 @app.route('/art/')
 def artpage():
