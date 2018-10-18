@@ -6,6 +6,15 @@
 
 {% block body %}
 
+	<section class="my_main_section">
+		<h4>Poem Loader</h4>
+		<form action="/poetry/" method="get">
+		<select name="poem">
+		  <option value="firedragon.txt">The Fire Dragon</option>
+		</select>
+		<input type="submit" value="Submit">
+		</form> 
+
 {{ poem|safe }}
 
 {% endblock body %}

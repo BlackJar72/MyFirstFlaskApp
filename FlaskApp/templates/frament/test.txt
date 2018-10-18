@@ -1,5 +1,5 @@
 
-	<section class="my_main_section">
-		<h4>Test!</h4>
+
+		<h2>Test!</h2>
 		<p>Some test stuff....</p>
 	</section>

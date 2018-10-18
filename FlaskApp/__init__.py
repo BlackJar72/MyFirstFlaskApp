@@ -32,11 +32,10 @@ def desktoppage():
 def poempage():
     if request.method == 'GET':
       title = request.args.get('poem')
-      if title != None:
-        print(fragdict[title])
+      if title != None and title in fragdict:
         return render_template('poetry.html', poem=fragdict[title])
       else:
-        return render_template('poetry.html', poem='')    
+        return render_template('poetry.html', poem='')
     return render_template('poetry.html', poem='')
 
 @app.route('/art/')
