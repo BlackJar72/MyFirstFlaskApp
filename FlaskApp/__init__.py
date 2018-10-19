@@ -48,7 +48,7 @@ def musicpage():
 
 @app.route('/bio/')
 def biopage():
-    return underConstruction()
+    return render_template("bio.html")
 
 @app.route('/resume/')
 def resumepage():
