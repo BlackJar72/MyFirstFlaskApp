@@ -56,7 +56,7 @@ def resumepage():
 
 @app.route('/contact/')
 def contactpage():
-    return underConstruction()
+    return render_template("mail.html")
   
 @app.errorhandler(404)
 def handle404(e):
