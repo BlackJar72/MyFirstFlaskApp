@@ -21,38 +21,38 @@
     <a href="/"><img class="my_ferret_text" src="{{ url_for('static', filename='img/FerretRText.png') }}"></a>
     <nav class="my_navbar">
       <ul class="my_navbar">
-	<div class="my_dropper">
-	  <li class="my_navbar">Software</li>
-	    <div class="my_dropdown">
-	      <li class="my_dropped_item"><a href="/projects/" class="my_dropdown_link">Software Projects</a></li>
-	      <li class="my_dropped_item"><a href="https://github.com/BlackJar72" class="my_dropdown_link" 
-		  target="_new">GitHub (external)</a></li>
-	      <hr class="my_droplist_div" />
-	      <li class="my_dropped_item"><a href="/contact/" class="my_dropdown_link">Contact</a></li>
-	    </div>
-	</div>
-	<div class="my_dropper">
-	  <li class="my_navbar">Personal</li>
-	    <div class="my_dropdown">
-	      <li class="my_dropped_item"><a href="/poetry/" class="my_dropdown_link">Poetry</a></li>
-	      <li class="my_dropped_item"><a href="/music/" class="my_dropdown_link">Music</a></li>
-	      <li class="my_dropped_item"><a href="/bio/" class="my_dropdown_link">Bio</a></li>
-	      <hr class="my_droplist_div" />
-	      <li class="my_dropped_item"><a href="/resume/" class="my_dropdown_link">Resume</a></li>
-	    </div>
-	</div>
+  <div class="my_dropper">
+    <li class="my_navbar">Software</li>
+      <div class="my_dropdown">
+        <li class="my_dropped_item"><a href="/projects/" class="my_dropdown_link">Software Projects</a></li>
+        <li class="my_dropped_item"><a href="https://github.com/BlackJar72" class="my_dropdown_link" 
+      target="_new">GitHub (external)</a></li>
+        <hr class="my_droplist_div" />
+        <li class="my_dropped_item"><a href="/contact/" class="my_dropdown_link">Contact</a></li>
+      </div>
+  </div>
+  <div class="my_dropper">
+    <li class="my_navbar">Personal</li>
+      <div class="my_dropdown">
+        <li class="my_dropped_item"><a href="/poetry/" class="my_dropdown_link">Poetry</a></li>
+        <li class="my_dropped_item"><a href="/music/" class="my_dropdown_link">Music</a></li>
+        <li class="my_dropped_item"><a href="/bio/" class="my_dropdown_link">Bio</a></li>
+        <hr class="my_droplist_div" />
+        <li class="my_dropped_item"><a href="/resume/" class="my_dropdown_link">Resume</a></li>
+      </div>
+  </div>
       </ul>
     </nav>
   </header>
 
-	<nav class="my_sidebar">
-		<img style="bottom: 96px; position: absolute; float: left; left: 0px; width: 100%;" 
-		     src="{{ url_for('static', filename='img/FerretoniaS.gif') }}">
-	</nav>
+  <nav class="my_sidebar">
+    <img style="bottom: 96px; position: absolute; float: left; left: 0px; width: 100%;" 
+         src="{{ url_for('static', filename='img/FerretoniaS.gif') }}">
+  </nav>
 
-	{% block body %}
-	{# <!-- CONTENT HERE --> #}
-	{% endblock %}
+  {% block body %}
+  {# <!-- CONTENT HERE --> #}
+  {% endblock %}
 
 
 

@@ -6,27 +6,25 @@
 
 {% block body %}
 
-	<section class="my_main_section">
-		<h4>Poem Loader</h4>
-		<p>Selction the poem you want to read and submit to see it.</p>
-		<form action="/poetry/" method="get">
-		<select name="poem">
-		  <option value="firedragon">The Fire Dragon</option>
-		  <option value="stormynight">Stormy Night</option>
-		  <option value="floatingisland">The Floating Island</option>
-		  <option value="seeingstars">Seeing Stars</option>
-		  <option value="magicskiff">The Magic Skiff</option>
-		  <option value="lostones">The Lost Ones</option>
-		  <option value="candles">Candles</option>
-		  <option value="echoes">Echoes</option>
-		  <option value="mirror">The Stranger</option>
-		  <option value="peace">A Moment of Peace</option>
-		</select>
-		<input type="submit" value="Submit">
-		</form> 
+  <section class="my_main_section">
+    <h4>Poem Loader</h4>
+    <p>Selction the poem you want to read and submit to see it.</p>
+    <form action="/poetry/" method="get">
+    <select name="poem">
+      <option value="firedragon">The Fire Dragon</option>
+      <option value="stormynight">Stormy Night</option>
+      <option value="floatingisland">The Floating Island</option>
+      <option value="seeingstars">Seeing Stars</option>
+      <option value="magicskiff">The Magic Skiff</option>
+      <option value="lostones">The Lost Ones</option>
+      <option value="candles">Candles</option>
+      <option value="echoes">Echoes</option>
+      <option value="mirror">The Stranger</option>
+      <option value="peace">A Moment of Peace</option>
+    </select>
+    <input type="submit" value="Submit">
+    </form> 
 
 {{ poem|safe }}
-	
-	</section>
 
 {% endblock body %}
