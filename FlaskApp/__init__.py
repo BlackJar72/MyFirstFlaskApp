@@ -8,6 +8,7 @@ I need to look into modularizing this.
 '''
 
 app = Flask(__name__)
+mail_settings = {}
 
 fragnames = os.listdir("templates/frament")
 fragdict = {}
@@ -26,7 +27,7 @@ def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
   sv = readDatFile('fmgmsv')
-  mail_settings = {
+  global mail_settings = {
     "DEBUG" : False,
     "MAIL_SERVER" : sv,
     "MAIL_PORT" : 587,
@@ -61,6 +62,7 @@ def sendMail():
       f = open("../../../log/errors.log", 'a')
       f.write(str(e) + '\n')
       f.write(request.form + '\n')
+      f.write(mail_settings + '\n\n')
       return render_template("mail-fail.html")
   else:
     return render_template("mail-fail.html")
