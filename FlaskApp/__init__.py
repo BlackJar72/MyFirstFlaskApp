@@ -27,7 +27,7 @@ def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
   sv = readDatFile('fmgmsv')
-  global mail_settings = {
+  mail_settings = {
     "DEBUG" : False,
     "MAIL_SERVER" : sv,
     "MAIL_PORT" : 587,
