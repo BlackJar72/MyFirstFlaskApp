@@ -24,9 +24,6 @@ def readDatFile(name):
 
 
 def setupMail():
-  pw = readDatFile('fmgmpw')
-  nm = readDatFile('fmgmui')
-  sv = readDatFile('fmgmsv')
   print("Password: {0}".format(pw))
   print("Username: {0}".format(nm))
   print("Server:   {0}".format(sv))
@@ -46,13 +43,10 @@ def setupMail():
 mail = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
-print("Recipient: {0}".format(mailRecipient))
-print("Sender   : {0}".format(mailSender))
 
 
 @app.route('/sendmail/', methods=['GET', 'POST'])
 def sendMail():  
-  print(request.form)
   if request.method == 'POST':
     title = request.form['title']
     sender = request.form['name']    
@@ -63,13 +57,12 @@ def sendMail():
 	    sender=mailSender,
 	    recipients=[mailRecipient])
       msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
-      print('\n' + str(msg) + '\n')
       mail.send(msg)
       return render_template("mail-sent.html")
     except Exception as e:
-      print(str(e))
-      f = open("../../../log/errors.log", 'a')
+      f = open("../../../log/errors.log", 'a')      
       f.write(str(e) + '\n\n')    
+      f.close()
       return render_template("mail-fail.html")  
   else:
     return render_template("mail-fail.html")
