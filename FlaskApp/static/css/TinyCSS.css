@@ -126,3 +126,10 @@ my_inline_header {
     font-family: "Times New Roman", Times, serif;
     font-style: bold;
 }
+
+div.my_contact_form {  
+    background-color:#B0B8FF;
+    margin: 4px;
+    padding: 4px;
+    border-radius: 2px;
+}
