@@ -6,15 +6,27 @@
 
 {% block body %}
   <section class="my_main_section">
-    <center><h1>Not Implemented</h1>
-    <p>Sorry, the mail form is not implemented.  Put simply, this demo page isn't 
-    staying around so no one is likely to be contacting me.  Even more importantly 
-    the code is going to be made public, so I don't want user names and passwords 
-    in it (though this could be loaded from a separate file) or to sign up for 
-    an e-mail just for this page.</p>
+  <h1>Send Me a Message: </h1>  
+  <div class="my_contact_form">
+    <form action="/sendmail/" method="post">
+      Your Name: <input type="text" name="name"><br />
+      Your Email: <input type="email" name="email"><br />
+      Title: <input type="text" name="title"><br />
+      Message:<br />
+      <textarea name="body" rows="12" cols="48" >Your message here</textarea><br />
+      <input type="submit" value="Send">
+    </form>
+  </div>
     
-    <p>Please don't be disappointed.</p>
+    <br /><hr /> <br />
     
-    <a href="/" style="font-size: 20;">Back to the Beginning....</a></center>
+  <h2>Find me Elsewhere Online: </h2>
+  <ul>
+  <li><a href="https://github.com/BlackJar72">GitHub</li>
+  <li><a href="https://www.hackerrank.com/blackjar72">Hacker Rank</li>
+  <li><a href="https://www.youtube.com/channel/UC0wFanYBEc114-CtQ3lVX-A">You Tube</li>
+  <li><a href="http://soundcloud.com/blackjar72">SoundCloud</li>
+  </ul>
+    
   </section>
 {% endblock %}

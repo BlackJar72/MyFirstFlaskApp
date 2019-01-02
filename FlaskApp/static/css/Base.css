@@ -12,4 +12,12 @@ header.my_header {
     left: 0px;
 }
 
-
+div.my_contact_form {  
+    background-color:#B0B8FF;
+    margin: 8px;
+    padding: 8px;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: medium;
+    border-color: blue;
+}
