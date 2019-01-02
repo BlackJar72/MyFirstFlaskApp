@@ -23,6 +23,7 @@ def readDatFile(name):
   f.close()
   return out
 
+
 def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
@@ -43,7 +44,7 @@ mail = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
 
-'''
+
 @app.route('/sendmail/', methods=['GET', 'POST'])
 def sendMail():
   if request.method == 'POST':
@@ -133,7 +134,7 @@ def contactpage():
 @app.errorhandler(404)
 def handle404(e):
   return render_template("404.html")
-'''
+
 
 @app.route('/')
 def homepage():
