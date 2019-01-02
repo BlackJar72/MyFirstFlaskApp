@@ -43,7 +43,8 @@ def setupMail():
 mail = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
-
+ 
+ 
 
 @app.route('/sendmail/', methods=['GET', 'POST'])
 def sendMail():  
