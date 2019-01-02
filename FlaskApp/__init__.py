@@ -136,10 +136,6 @@ def handle404(e):
   return render_template("404.html")
 
 
-@app.route('/')
-def homepage():
-    return render_template("fuckyou.html")
-
 #Start the whole thing running!!!
 if __name__ == "__main__":
   app.run(host='0.0.0.0')
