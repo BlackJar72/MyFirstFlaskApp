@@ -27,6 +27,9 @@ def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
   sv = readDatFile('fmgmsv')
+  print(pw)
+  print(nm)
+  print(sv)
   mail_settings = {
     "DEBUG" : False,
     "MAIL_SERVER" : sv,
