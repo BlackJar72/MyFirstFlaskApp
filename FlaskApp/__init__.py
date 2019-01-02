@@ -1,32 +1,93 @@
 from flask import Flask, render_template, redirect, url_for, request
+from flask_mail import Mail, Message
 import sys, os
+
+'''
+FIXME: This is growing large and unwieldy.
+I need to look into modularizing this.
+'''
 
 app = Flask(__name__)
 
 fragnames = os.listdir("templates/frament")
 fragdict = {}
+
+
+def readDatFile(name):
+  f = open("../../../dat/" + name)
+  out = f.read()
+  f.close()
+  return out
+
+
+def setupMail():
+  pw = readDatFile('fmgmpw')
+  nm = readDatFile('fmgmui')
+  sv = readDatFile('fmgmsv')
+  print(pw)
+  print(nm)
+  print(sv)
+  mail_settings = {
+    "DEBUG" : True,
+    "MAIL_SERVER" : sv,
+    "MAIL_PORT" : 587,
+    "MAIL_USE_TLS" : True,
+    "MAIL_USERNAME" : nm,
+    "MAIL_PASSWORD" : pw  
+  }
+  app.config.update(mail_settings)
+  return Mail(app)
+
+
+mail = setupMail()
+mailRecipient = readDatFile('fmgmrp')
+mailSender    = readDatFile('fmgmsd')
+print(mailRecipient)
+print(MailSender)
+
+
+def sendMail(title, body, sender, email):
+  try:
+    msg = Message("[KF:MSG] {0}".format(title), 
+	  sender=MAIL_SERVER,
+	  recipients=[mailRecipient])
+    msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
+    mail.send(msg)
+    return "<h2>Message Sent!</h2>"  # TODO: Return a template
+  except Exception as e:
+    f = open("../../../log/errors.log", 'a')
+    f.write(str(e) + '\n\n')    
+    return str(e)  # TODO: Return a template
+
+
 for fname in fragnames: 
   with open("templates/frament/" + fname, 'r') as f:
     fragdict[fname] = f.read()
 
+
 def underConstruction():
   return render_template("unfinished.html")
+
 
 @app.route('/')
 def homepage():
     return render_template("main.html")
 
+
 @app.route('/projects/')
 def projpage():
     return render_template("projects.html")
+
 
 @app.route('/games/')
 def gamespage():
     return redirect(url_for('projpage',_anchor='games'))
 
+
 @app.route('/desktop/')
 def desktoppage():
     return redirect(url_for('projpage',_anchor='desktop'))
+
 
 @app.route('/poetry/', methods=['GET', 'POST'])
 def poempage():
@@ -38,25 +99,31 @@ def poempage():
         return render_template('poetry.html', poem='')
     return render_template('poetry.html', poem='')
 
+
 @app.route('/art/')
 def artpage():
     return underConstruction()
+
 
 @app.route('/music/')
 def musicpage():
     return render_template("music.html")
 
+
 @app.route('/bio/')
 def biopage():
     return render_template("bio.html")
+
 
 @app.route('/resume/')
 def resumepage():
     return render_template("resume.html")
 
+
 @app.route('/contact/')
 def contactpage():
     return render_template("mail.html")
+
   
 @app.errorhandler(404)
 def handle404(e):
@@ -65,5 +132,5 @@ def handle404(e):
 
 #Start the whole thing running!!!
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+  app.run(host='0.0.0.0')
 
