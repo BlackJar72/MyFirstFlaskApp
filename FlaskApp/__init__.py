@@ -22,7 +22,6 @@ def readDatFile(name):
   f.close()
   return out
 
-
 def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
@@ -39,16 +38,17 @@ def setupMail():
     "MAIL_PASSWORD" : pw  
   }
   app.config.update(mail_settings)
-  return Mail(app)
+  print(mail_settings)
+  return Mail(app), mail_settings
 
 
-mail = setupMail()
+mail, mail_settings = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
 
 
 @app.route('/sendmail/', methods=['GET', 'POST'])
-def sendMail():  
+def sendMail():
   if request.method == 'POST':
     title = request.form['title']
     sender = request.form['name']    
@@ -63,7 +63,9 @@ def sendMail():
       return render_template("mail-sent.html")
     except Exception as e:
       f = open("../../../log/errors.log", 'a')
-      f.write(str(e) + '\n\n')    
+      f.write(str(e) + '\n')    
+      f.write(request.form + '\n')    
+      f.write(str(mail_settings) + '\n\n')    
       return render_template("mail-fail.html")  
   else:
     return render_template("mail-fail.html")
