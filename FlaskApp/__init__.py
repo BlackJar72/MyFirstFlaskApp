@@ -43,7 +43,7 @@ mail = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
 
-
+'''
 @app.route('/sendmail/', methods=['GET', 'POST'])
 def sendMail():
   if request.method == 'POST':
@@ -133,7 +133,11 @@ def contactpage():
 @app.errorhandler(404)
 def handle404(e):
   return render_template("404.html")
+'''
 
+@app.route('/')
+def homepage():
+    return render_template("fuckyou.html")
 
 #Start the whole thing running!!!
 if __name__ == "__main__":
