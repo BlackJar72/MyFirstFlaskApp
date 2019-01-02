@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 fragnames = os.listdir("templates/frament")
 fragdict = {}
-for fname in fragnames: 
+for fname in fragnames:
   with open("templates/frament/" + fname, 'r') as f:
     fragdict[fname] = f.read()
 
@@ -26,23 +26,19 @@ def setupMail():
   pw = readDatFile('fmgmpw')
   nm = readDatFile('fmgmui')
   sv = readDatFile('fmgmsv')
-  print(pw)
-  print(nm)
-  print(sv)
   mail_settings = {
     "DEBUG" : False,
     "MAIL_SERVER" : sv,
     "MAIL_PORT" : 587,
     "MAIL_USE_TLS" : True,
     "MAIL_USERNAME" : nm,
-    "MAIL_PASSWORD" : pw  
+    "MAIL_PASSWORD" : pw
   }
   app.config.update(mail_settings)
   print(mail_settings)
-  return Mail(app), mail_settings
+  return Mail(app)
 
-
-mail, mail_settings = setupMail()
+mail = setupMail()
 mailRecipient = readDatFile('fmgmrp')
 mailSender    = readDatFile('fmgmsd')
 
@@ -51,11 +47,11 @@ mailSender    = readDatFile('fmgmsd')
 def sendMail():
   if request.method == 'POST':
     title = request.form['title']
-    sender = request.form['name']    
+    sender = request.form['name']
     email = request.form['email']
     body = request.form['body']
     try:
-      msg = Message("[KF:MSG] {0}".format(title), 
+      msg = Message("[KF:MSG] {0}".format(title),
 	    sender=mailSender,
 	    recipients=[mailRecipient])
       msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
@@ -63,10 +59,9 @@ def sendMail():
       return render_template("mail-sent.html")
     except Exception as e:
       f = open("../../../log/errors.log", 'a')
-      f.write(str(e) + '\n')    
-      f.write(request.form + '\n')    
-      f.write(str(mail_settings) + '\n\n')    
-      return render_template("mail-fail.html")  
+      f.write(str(e) + '\n')
+      f.write(request.form + '\n')
+      return render_template("mail-fail.html")
   else:
     return render_template("mail-fail.html")
 
