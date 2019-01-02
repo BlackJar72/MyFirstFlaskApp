@@ -61,8 +61,10 @@ def sendMail():
     except Exception as e:
       f = open("../../../log/errors.log", 'a')
       f.write(str(e) + '\n')
-      f.write(request.form + '\n')
-      f.write(mail_settings + '\n\n')
+      f.write(request.form)
+      f.write('\n')
+      f.write(mail_settings)
+      f.write('\n\n')
       return render_template("mail-fail.html")
   else:
     return render_template("mail-fail.html")
