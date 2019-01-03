@@ -129,7 +129,12 @@ my_inline_header {
 
 div.my_contact_form {  
     background-color:#B0B8FF;
-    margin: 4px;
-    padding: 4px;
-    border-radius: 2px;
+    margin: 2px;
+    padding: 2px;
+    width: 60%;
+}
+
+textarea.my_mail_textarea {  
+    background-color:#FFFFFF;
+    width: 98%;
 }

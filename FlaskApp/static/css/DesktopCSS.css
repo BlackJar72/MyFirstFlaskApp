@@ -155,4 +155,11 @@ div.my_contact_form {
     border-style: solid;
     border-width: medium;
     border-color: blue;
+    width: 640px;  
+    max-width: 90%;
+}
+
+textarea.my_mail_textarea {  
+    background-color:#FFFFFF;
+    width: 98%;
 }

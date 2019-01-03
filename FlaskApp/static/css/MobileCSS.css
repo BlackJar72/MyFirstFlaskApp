@@ -189,10 +189,17 @@ my_inline_header {
 
 div.my_contact_form {  
     background-color:#B0B8FF;
-    margin: 8px;
-    padding: 8px;
+    margin: 4px;
+    padding: 4px;
     border-radius: 2px;
     border-style: solid;
     border-width: medium;
     border-color: blue;
+    width: 640px;  
+    max-width: 90%;
+}
+
+textarea.my_mail_textarea {  
+    background-color:#FFFFFF;
+    width: 98%;
 }
