@@ -133,7 +133,7 @@ def contactpage():
   
 @app.errorhandler(404)
 def handle404(e):
-  return render_template("404.html")
+  return render_template("404.html"), 404 
 
 
 #Start the whole thing running!!!
