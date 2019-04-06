@@ -77,12 +77,12 @@ def underConstruction():
 
 @app.route('/')
 def homepage():
-    return render_template("main.html")
+    return render_template("mail.html")
 
 
 @app.route('/projects/')
 def projpage():
-    return render_template("projects.html")
+    return render_template("mail.html")
 
 
 @app.route('/games/')
@@ -113,17 +113,17 @@ def artpage():
 
 @app.route('/music/')
 def musicpage():
-    return render_template("music.html")
+    return render_template("mail.html")
 
 
 @app.route('/bio/')
 def biopage():
-    return render_template("bio.html")
+    return render_template("mail.html")
 
 
 @app.route('/resume/')
 def resumepage():
-    return render_template("resume.html")
+    return render_template("mail.html")
 
 
 @app.route('/contact/')
@@ -133,7 +133,7 @@ def contactpage():
   
 @app.errorhandler(404)
 def handle404(e):
-  return render_template("404.html"), 404 
+  return render_template("404.html")
 
 
 #Start the whole thing running!!!
