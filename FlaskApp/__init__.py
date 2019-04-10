@@ -77,12 +77,12 @@ def underConstruction():
 
 @app.route('/')
 def homepage():
-    return render_template("mail.html")
+    return render_template('main.html')
 
 
 @app.route('/projects/')
 def projpage():
-    return render_template("mail.html")
+    return render_template('projects.html')
 
 
 @app.route('/games/')
@@ -113,17 +113,17 @@ def artpage():
 
 @app.route('/music/')
 def musicpage():
-    return render_template("mail.html")
+    return render_template('music.html')
 
 
 @app.route('/bio/')
 def biopage():
-    return render_template("mail.html")
+    return render_template('bio.html')
 
 
 @app.route('/resume/')
 def resumepage():
-    return render_template("mail.html")
+    return render_template('resume.html')
 
 
 @app.route('/contact/')
