@@ -1,4 +1,7 @@
 FlaskApp/venv
+venv
 dat
 log
+.directory
+__pycache__
 
