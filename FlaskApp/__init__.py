@@ -53,12 +53,13 @@ def sendMail():
     email = request.form['email']
     body = request.form['body']
     try:
-      msg = Message("[KF:MSG] {0}".format(title),
-	    sender=mailSender,
-	    recipients=[mailRecipient])
-      msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
-      mail.send(msg)
-      return render_template("mail-sent.html")
+#      msg = Message("[KF:MSG] {0}".format(title),
+#	    sender=mailSender,
+#	    recipients=[mailRecipient])
+#      msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
+#      mail.send(msg)
+#      return render_template("mail-sent.html")
+  return render_template("404.html")
     except Exception as e:
       f = open("../../../log/errors.log", 'a')
       f.write(str(e) + '\n')
@@ -66,37 +67,45 @@ def sendMail():
       f.write('\n')
       f.write(mail_settings)
       f.write('\n\n')
-      return render_template("mail-fail.html")
+#      return render_template("mail-fail.html")
+  return render_template("404.html")
   else:
-    return render_template("mail-fail.html")
+#    return render_template("mail-fail.html")
+  return render_template("404.html")
 
 
 def underConstruction():
-  return render_template("unfinished.html")
+#  return render_template("unfinished.html")
+  return render_template("404.html")
 
 
 @app.route('/')
 def homepage():
-    return render_template('main.html')
+#    return render_template('main.html')
+  return render_template("404.html")
 
 
 @app.route('/projects/')
 def projpage():
-    return render_template('projects.html')
+#    return render_template('projects.html')
+  return render_template("404.html")
 
 
 @app.route('/games/')
 def gamespage():
-    return redirect(url_for('projpage',_anchor='games'))
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template("404.html")
 
 
 @app.route('/desktop/')
 def desktoppage():
-    return redirect(url_for('projpage',_anchor='desktop'))
+#    return redirect(url_for('projpage',_anchor='desktop'))
+  return render_template("404.html")
 
 
 @app.route('/poetry/', methods=['GET', 'POST'])
 def poempage():
+  '''
     if request.method == 'GET':
       title = request.args.get('poem')
       if title != None and title in fragdict:
@@ -104,31 +113,38 @@ def poempage():
       else:
         return render_template('poetry.html', poem='')
     return render_template('poetry.html', poem='')
+    '''    
+  return render_template("404.html")
 
 
 @app.route('/art/')
 def artpage():
-    return underConstruction()
+#    return underConstruction()
+  return render_template("404.html")
 
 
 @app.route('/music/')
 def musicpage():
-    return render_template('music.html')
+#    return render_template('music.html')
+  return render_template("404.html")
 
 
 @app.route('/bio/')
 def biopage():
-    return render_template('bio.html')
+#    return render_template('bio.html')
+  return render_template("404.html")
 
 
 @app.route('/resume/')
 def resumepage():
-    return render_template('resume.html')
+#    return render_template('resume.html')
+  return render_template("404.html")
 
 
 @app.route('/contact/')
 def contactpage():
-    return render_template("mail.html")
+#    return render_template("mail.html")
+  return render_template("404.html")
 
   
 @app.errorhandler(404)
