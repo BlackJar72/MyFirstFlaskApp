@@ -83,8 +83,14 @@ def homepage():
 
 @app.route('/projects/')
 def projpage():
-#    return render_template('projects.html')
-  return render_template("404.html")
+    return render_template('projects.html')
+#  return render_template("404.html")
+
+
+@app.route('/CavernsOfEvil/')
+def cavernspage():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template("CavernsOfEvil.html")
 
 
 @app.route('/games/')
@@ -101,7 +107,7 @@ def desktoppage():
 
 @app.route('/poetry/', methods=['GET', 'POST'])
 def poempage():
-  '''
+#  '''
     if request.method == 'GET':
       title = request.args.get('poem')
       if title != None and title in fragdict:
@@ -109,20 +115,26 @@ def poempage():
       else:
         return render_template('poetry.html', poem='')
     return render_template('poetry.html', poem='')
-    '''    
-  return render_template("404.html")
+#    '''    
+#  return render_template("404.html")
 
 
 @app.route('/art/')
-def artpage():
+def artpage3d():
 #    return underConstruction()
-  return render_template("404.html")
+  return render_template("paintings.html")
+
+
+@app.route('/paintings/')
+def artpage2d():
+#    return underConstruction()
+  return render_template("paintings.html")
 
 
 @app.route('/music/')
 def musicpage():
-#    return render_template('music.html')
-  return render_template("404.html")
+    return render_template('music.html')
+#  return render_template("404.html")
 
 
 @app.route('/bio/')

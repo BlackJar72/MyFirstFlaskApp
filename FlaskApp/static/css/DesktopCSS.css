@@ -39,7 +39,7 @@ h1.my_navbar {
     float: left;
     list-style-type: none;
     display: inline-block;
-    font-size: 32px;
+    font-size: 40px;
     padding: 0px 32px 0px 32px;
 }
 
@@ -137,6 +137,25 @@ img.my_ferret_ico {
 
 img.my_ferret_text {
     display: none;
+}
+
+img.caverns_oe_hero {
+    float: left; 
+    max-width: 100%;
+    height: auto;
+    padding: 12px;
+}
+
+img.painting {
+    float: left; 
+    min-width: 90%;
+    max-width: 90%;
+    height: auto;
+}
+
+
+figcaption.caption {
+    display: block;
 }
 
 my_inline_header {

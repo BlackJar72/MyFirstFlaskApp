@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+  <section class="my_main_section">
+   
+  
+  <h2>Acryllic Paintings</h2>
+  
+  <p>Some of my better works as a hobby painter.</P>
+    
+     <table>
+        <tr>
+            <td> 
+                <b><i>Desert in Bloom</i></b> - acryllic on canvas
+                <br><br><img class="painting" src="{{ url_for('static', filename='img/art/DesertInBloom-1024.jpg') }}" alt="Desert in Bloom">
+            </td>
+            <td> 
+                <b><i>Flooded Wash</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/FloodedWash-1024.jpg') }}" alt="Flooded Wash">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b><i>Spring Arrangement</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/SpringArrangement-1024.jpg') }}" alt="Spring Arrangement">
+            </td>
+            <td> 
+                <b><i>Girl in s Fancy Hat</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/GirlInAFancyHat.jpg') }}" alt="Girl in a Fancy Hat">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b><i>Mimosa in Bloom</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/MimosaInBloom-1024.jpg') }}" alt="Mimosa in Bloom">
+            </td>
+            <td> 
+                <b><i>The Divining Pool</i></b> - acryllic on canvas board
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/TheDiviningPool-1024.jpg') }}" alt="The Divining Pool">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b><i>Peak Over the Meadows</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/PeakOverTheMeadows-1024.jpg') }}" alt="Peak Over the Meadows">
+            </td>
+            <td> 
+                <b><i>She Enjoys the Spring Showers</i></b> - acryllic on wood
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/SheEnjoysTheSpringShowers.jpg') }}" alt="She Enjoys the Spring Showers">
+            </td>
+        </tr>
+        <tr>
+            <td> 
+                <b><i>Snow Drifts</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/SnowDrifts-1024.jpg') }}" alt="Snow Drifts">
+            </td>
+            <td> 
+                <b><i>Flowers on the Deck</i></b> - acryllic on canvas
+                <br><img class="painting" src="{{ url_for('static', filename='img/art/FlowersOnTheDeck-1024.jpg') }}" alt="Flowers on the Deck">
+            </td>
+        </tr>
+    </table> 
+
+  
+  </section>
+{% endblock %}
+ 

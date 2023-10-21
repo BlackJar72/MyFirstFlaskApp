@@ -17,29 +17,36 @@
   <header class="my_header">
     <a href="/"><img class="my_ferret_ico" src="{{ url_for('static', filename='img/FerretR.png') }}" alt=""></a>
     <img class="my_menu_ico" src="{{ url_for('static', filename='img/MenuIco.png') }}"  alt="Menu">
-    <h1 class="my_navbar">Knight Ferret!</h1>
+    <h1 class="my_navbar">Knight Ferret Studios</h1>
     <a href="/"><img class="my_ferret_text" src="{{ url_for('static', filename='img/FerretRText.png') }}" alt="Knight Ferret"></a>
     <nav class="my_navbar">
       <ul class="my_navbar">
   <div class="my_dropper">
-    <li class="my_navbar">Software</li>
+    <li class="my_navbar"><a href="/" class="my_dropdown_link">Home</a></li>
+  </div>
+  <div class="my_dropper">
+    <li class="my_navbar">Games</li>
       <div class="my_dropdown">
-        <li class="my_dropped_item"><a href="/" class="my_dropdown_link">Home</a></li>
-        <li class="my_dropped_item"><a href="/projects/" class="my_dropdown_link">Software Projects</a></li>
-        <li class="my_dropped_item"><a href="https://github.com/BlackJar72" class="my_dropdown_link" 
-      target="_new">GitHub (external)</a></li>
+        <li class="my_dropped_item"><a href="/CavernsOfEvil/" class="my_dropdown_link">Caverns of Evil</a></li>
         <!--hr class="my_droplist_div" /-->
       </div>
   </div>
   <div class="my_dropper">
-    <li class="my_navbar">Personal</li>
+    <li class="my_navbar">Game Assets</li>
       <div class="my_dropdown">
+        <li class="my_dropped_item">Comming Soon...</li>
+        <!--hr class="my_droplist_div" /-->
+      </div>
+  </div>
+  <div class="my_dropper">
+    <li class="my_navbar">Miscellaneous</li>
+      <div class="my_dropdown">
+        <li class="my_dropped_item"><a href="/projects/" class="Old Software Projects">Software Projects</a></li>
+        <li class="my_dropped_item"><a href="/paintings/" class="my_dropdown_link">Art (2D)</a></li>
         <li class="my_dropped_item"><a href="/poetry/" class="my_dropdown_link">Poetry</a></li>
         <li class="my_dropped_item"><a href="/music/" class="my_dropdown_link">Music</a></li>
-        <li class="my_dropped_item"><a href="/bio/" class="my_dropdown_link">Bio</a></li>
-        <hr class="my_droplist_div" />
-        <li class="my_dropped_item"><a href="/resume/" class="my_dropdown_link">Resume</a></li>
-        <li class="my_dropped_item"><a href="/contact/" class="my_dropdown_link">Contact</a></li>
+        <!--<hr class="my_droplist_div" />
+        <li class="my_dropped_item"><a href="/contact/" class="my_dropdown_link">Contact</a></li>-->
       </div>
   </div>
       </ul>

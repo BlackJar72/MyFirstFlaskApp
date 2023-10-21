@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+  <section class="my_main_section">
+  
+  
+    <a href="https://store.steampowered.com/app/1929380/Caverns_of_Evil/"><img class="caverns_oe_hero" src="{{ url_for('static', filename='img/CavernsOfEvils-heroFB.png') }}" alt="Caverns of Evil"></a>
+  
+  
+    <p>Caverns of Evil an action roguelite that plays much like a '90s first-person shooter; its basically a dungeon crawler with guns and fast action.  Fight through ever-increasing hordes of monsters while the gathering ever more powerful weapons you'll need to survive.  This is a simple game, designed for some good old-fashioned violent fun.  Play as long as you like and can stay alive, there are always more levels -- how many levels can you get through?</p>
+    
+     <table>
+        <tr>
+            <td> 
+                <iframe width="420" height="315"
+                src="https://youtu.be/yZsA2YupNCA?si=eJke-ot3M2TMw3-V">
+                </iframe>
+            </td>
+            <td>             
+                <iframe width="420" height="315"
+                src="https://youtu.be/-0HeYe3O8Rk?si=LhkIG2-NvwpPLKdk">
+                </iframe>
+            </td>
+        </tr>
+    </table> 
+
+    <h2>Backstory</h2>
+
+    <p><i>"You remember a time before the world changed, a time of strange magics like horseless carriages, moving painting, and little boxes that could house whole worlds. Then they came and reality shifted, the old magics began to disappear to replaced by ones now that now seem familiar.  A little of the old world remains, like your strange black wand that shoots out pieces of hot lead -- and has gotten you out of some tight situation...but will it be enough to save you from the monstrous hoards you now face?"</i></p>
+
+    <h2>Gameplay</h2>
+
+    <p>The goal is to see how many levels you can get through before dying, and not sweat your inevitable demise.  While you can now officially beat the game, you can continue to further levels as NG+.  You shoot and slash your way through the levels while looking for armor and weapons to increase your chance of survival, then enter the portal tele-fog to progress.  Jump onto high areas for tactical advantage, while using whatever advantage you can find.  Use the right weapons for the right enemies while trying not to waste ammo you might need later.  With melee weapons you can also make stealth attack on unaware opponents, or jump to power attack, both of which are criticals (and stack).  With guns (in their magical form) kill at range, and use deadly wands for more dangerous enemies ... and remember that some enemies have special abilities or resistance to some attack forms.</p>
+
+    <p>Each level is a new and unique, generated once and never seen before or again.  Caverns of Evil does not use pre-fabricated rooms or level sections, but generates the layout and geometry of each room and level, creating some truly unique rooms on every run.</p>
+    
+      
+    <p><br style="text-align: right; text-indent: 64px;"/><h2><a href="https://store.steampowered.com/app/1929380/Caverns_of_Evil/"><i><u>Get Caverns of Evil</u></i> on Steam</a></h2></p>
+
+  
+  </section>
+{% endblock %}
