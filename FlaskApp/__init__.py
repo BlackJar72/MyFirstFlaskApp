@@ -17,32 +17,32 @@ for fname in fragnames:
     fragdict[fname] = f.read()
 
 
-def readDatFile(name):
-  f = open("../../../dat/" + name)
-  out = f.read()
-  f.close()
-  return out
+#def readDatFile(name):
+  #f = open("../../../dat/" + name)
+  #out = f.read()
+  #f.close()
+  #return out
 
 
-def setupMail():
-  pw = readDatFile('fmgmpw')
-  nm = readDatFile('fmgmui')
-  sv = readDatFile('fmgmsv')
-  mail_settings = {
-    "DEBUG" : False,
-    "MAIL_SERVER" : sv,
-    "MAIL_PORT" : 587,
-    "MAIL_USE_TLS" : True,
-    "MAIL_USERNAME" : nm,
-    "MAIL_PASSWORD" : pw
-  }
-  app.config.update(mail_settings)
-  print(mail_settings)
-  return Mail(app)
+#def setupMail():
+  #pw = readDatFile('fmgmpw')
+  #nm = readDatFile('fmgmui')
+  #sv = readDatFile('fmgmsv')
+  #mail_settings = {
+    #"DEBUG" : False,
+    #"MAIL_SERVER" : sv,
+    #"MAIL_PORT" : 587,
+    #"MAIL_USE_TLS" : True,
+    #"MAIL_USERNAME" : nm,
+    #"MAIL_PASSWORD" : pw
+  #}
+  #app.config.update(mail_settings)
+  #print(mail_settings)
+  #return Mail(app)
 
-mail = setupMail()
-mailRecipient = readDatFile('fmgmrp')
-mailSender    = readDatFile('fmgmsd')
+#mail = setupMail()
+#mailRecipient = readDatFile('fmgmrp')
+#mailSender    = readDatFile('fmgmsd')
 
 
 @app.route('/sendmail/', methods=['GET', 'POST'])
@@ -53,13 +53,12 @@ def sendMail():
     email = request.form['email']
     body = request.form['body']
     try:
-#      msg = Message("[KF:MSG] {0}".format(title),
-#	    sender=mailSender,
-#	    recipients=[mailRecipient])
-#      msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
-#      mail.send(msg)
-#      return render_template("mail-sent.html")
-  return render_template("404.html")
+      msg = Message("[KF:MSG] {0}".format(title),
+      sender=mailSender,
+      recipients=[mailRecipient])
+      msg.body = "From: {0}  ({1}) \n\n{2}".format(sender, email, body)
+      mail.send(msg)
+      return render_template("mail-sent.html")
     except Exception as e:
       f = open("../../../log/errors.log", 'a')
       f.write(str(e) + '\n')
@@ -68,9 +67,6 @@ def sendMail():
       f.write(mail_settings)
       f.write('\n\n')
 #      return render_template("mail-fail.html")
-  return render_template("404.html")
-  else:
-#    return render_template("mail-fail.html")
   return render_template("404.html")
 
 
@@ -81,8 +77,8 @@ def underConstruction():
 
 @app.route('/')
 def homepage():
-#    return render_template('main.html')
-  return render_template("404.html")
+    return render_template('main.html')
+#  return render_template("404.html")
 
 
 @app.route('/projects/')
