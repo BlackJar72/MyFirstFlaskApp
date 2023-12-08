@@ -93,6 +93,12 @@ def cavernspage():
   return render_template("CavernsOfEvil.html")
 
 
+@app.route('/SimpleModularPillars/')
+def pillarspage():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template("SimpleModularPillars.html")
+
+
 @app.route('/games/')
 def gamespage():
 #    return redirect(url_for('projpage',_anchor='games'))

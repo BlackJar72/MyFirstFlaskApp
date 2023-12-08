@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+  <section class="my_main_section">
+      
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/RqVN_KkZEpQ?si=FF5MqtzcspYsBx3l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+    <p>Simple Modular Pillars is easy to use: Just place the pillar prefabs in a scene like any other prefab.  Or, if you like, combine the smaller pieces to make new combinations.</p>
+
+    <p>The prefabs are organized as follows:</p>
+     
+     <table>
+        <tr>
+            <td> 
+                <strong>Caps:</strong>  The tops and bottoms, bases and capitals of the pillars.  The tops have their origin at the top, to easily line up with the top of the column.
+            </td>
+        </tr>
+        <tr>
+            <td>             
+                <strong>Pieces:</strong>  Sections of main column, to be used either to create your own custom pillars (usually in combination with caps) or to lay on the ground as pieces of broken pillars.
+            </td>
+        </tr>
+            <td>             
+                <strong>Composite:</strong> Pillars pre-assembled from pieces and caps.
+            </td>
+        </tr>
+        </tr>
+            <td>             
+                <strong>Posts:</strong> Wooden posts (they are often used as pillars in many settings after all); of course, these can also be rotated to use as beams.
+            </td>
+        </tr>
+        </tr>
+            <td>             
+                <strong>Whole:</strong> Complete pillars, all in one piece and with more optimal colliders – for when you need a more optimized pillar, or just want something simple and and don’t want to fool with multi-part pillars.  This is where you can also find some simple square cross section pillars.
+            </td>
+        </tr>
+    </table>
+
+    <p>Composite prefabs are available for pillar heights of 3 to 6 meters / units.  To make your own pillars from the provided parts it is usually best to place a column from pieces and the add the caps as children; setting the top the the height of the pillar should work. Placing them in an empty parent and moving the caps directly under the parent, then moving the column up by 0.5 on the Y and the top by 1 on the Y will give you an extra meter / unit.  For even taller pillars, simply stack columns of appropriate sized; it is usually best to use as many 3 or 6 high as possible before using a shorter section for the remainder, so as to preserve the UV unrapping.</P>
+
+    <p>It is easy to swap out materials.  The whole pillars and caps work well with any high-noise and low-detail materials (such as a basic stone material).  The columns found under pieces, and also the posts, are UV’ed so as to have one complete texture wrap around them and repeat every 3 units on the Y*, with the thick pillars have a circumference of 3 so as to not distort the texture.  This allows all sort of tiling materials, your own or those from other packs, to easily be used so as to create pillars with custom looks for any setting or feel you want.</p>
+
+    <p>The image bellow should my pillars and some other building assets I’ve created used with materials from Blink and props from other creators (not included):</p>
+
+     <table>
+        <tr>
+            <td> 
+            <p><img class="caverns_oe_hero" src="{{ url_for('static', filename='img/SimplePillar-005.png') }}" alt="Simple Modular Pillars with Other Creators Assets"></p>
+            </td>
+        </tr>
+    </table>
+
+    <p>If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP version.</p>
+
+    <p>*<small><i>The 4-high pillar are an exception, and stretch the texture to the full height of 4 units, to avoid a strange repeat of just a small section from the bottom; the 4-high alt sections preserve the 3-high UV maps to avoid distortion instead, with the top 1/4th of the pillar being the a repeat of the bottom.  Pick the one that works best for the look you want.
+    If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP version.</i></small></p>
+    
+      
+    <p><br style="text-align: right; text-indent: 64px;"/><h2><a href="https://assetstore.unity.com/packages/3d/environments/simple-modular-pillars-255707#content"><i><u>Get Simple Modular Pillars on the Unity Asset Store</u></i> on Steam</a></h2></p>
+
+  
+  </section>
+{% endblock %}
