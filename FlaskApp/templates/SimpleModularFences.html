@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+  <section class="my_main_section">
+    
+    <H1>Simple Modular Fences<br><small><i>(Coming Soon)</i></small></H1>
+    
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/cxb23wHNd5s?si=hCXdBGeMaG7hyPQH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  
+    <p>SImple Modular Fences is a contains various types of wood, metal, and stone fences, along with gate for those fences, and some cage walls (which are pretty similar to fences).  Variants are include for most types to fit different workflows.  In addition to the fences themselves you get posts, slats, and bars related to those fence.  Also included are gates, scripts to open gates and doors, and a couple bonus materials.</p>
+    
+    <p>The models are basic modular place, to place in a scene. If you know how to build with scene view in
+    the editor, you know how to use these. They should work with any third party tools that can place
+    prefabs, of course.</p>
+
+    <ul>
+        <li>157 Models</li>
+        <li>11 Textures</li>
+        <li>6 Materials based on the standard metalicity workflow shader</li>
+        <li>Triangle count ranges between 12 and 3554, with most models having betwen 1k and 3k
+        UV Mapped</li>
+    </ul>
+    
+    <p>If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP version.</p>
+    
+    <p>No rigging or animations, but scripts are included to animate openable gates through transforms.  These include three scripts that may be applied to game objects, a base class, and an interface.</p>
+    
+    <p>A few naming conventions:</p>
+     
+     <table>
+        <tr>
+            <td> 
+                <strong>Raw</strong> gates and doors are non-moving, and intended for use as decorations or non-openable
+                barriers. These come flagged as static.
+            </td>
+        </tr>
+        <tr>
+            <td>             
+                <strong>Openable</strong> gates and doors are just what they say; they are built as a nested hierarchy of game
+                objects and have a script attached that will open them when activated.
+            </td>
+        </tr>
+            <td>            
+                The suffix <strong>SA</strong> for <em>stand-alone</em> is for fence section with a post on both sides,
+                good for placing as on there own, such as to block a passage in a dungeon, or to close a loop of “trad” section.
+            </td>
+        </tr>
+        </tr>
+            <td>             
+                Sections suffixed with <strong>Trad</trad> are for building fences in the traditional way, by inserting the the
+                end with no post into the post at the beginning of the next. Thus, they only have a post at one
+                end and the other end is slightly longer to provide for insertion.
+            </td>
+        </tr>
+        </tr>
+            <td>             
+                Section labeled with <strong>W</strong> (for <em>“whole"</em>) have a half-post split exactly in 
+                half at each end, to be “snapped” next to each other like walls. These were originally intended for 
+                use with a specific tool asset that sadly has become broken abandon-ware, but they could still be 
+                used as normal assets if you prefer to build in this way.
+            </td>
+        </tr>
+    </table>
+    
+    <h2>Materials and Textures</h2>
+    
+    <p>In addition to the textures and materials used on the existing prefabs, extra materials are provided for
+    those who would prefer a more rusted or petinaed look on their metal fences and gates. A grass texture
+    is also included, since it was needed for the demo and as it is part of the asset pack you are of course
+    free to use it.</P>
+
+    <p>The stone fences / walls should work with many other tiling brick patters, with those having 4-across
+    and 8-vertical bricks being particularly suitable. Of course, if you don’t like the included materials, or
+    just want more variation or to fit better with other assets you are free to experiment with other materials
+    on any of the models.</p>
+
+    <h2>Door Opening Scripts</h2>
+
+    <p>Included are a handful of fairly small, simple scripts for opening doors.</p>
+
+    <ul>
+        
+        </li><strong>IDoorOpener.cs</strong> is the base interface defining the core methods for opening door; only useful if
+        you are a programmer want to extend the system with more way to move doors.</li>
+
+        </li><strong>SimpleOpener.cs</strong> is am abstract base class that applies the IDoorOpener interface to a
+        MonoBehaviour, needed because variables assigned to interfaces don’t show in the inspector;
+        also really on important for programmers want to extend the system.</li>
+        
+        <li><strong>HingeOpener.cs</strong> is the script for opening doors, gates, and other things, by swinging around
+        pivot (the hinge).</li>
+
+        <li><strong>MovingOpener.cs</strong> is a script for opening a door by moving / translating a game object between
+        an open and close position, such as to raise a portcullis.</li>
+
+        <li><strong>MultiOpener.cs</strong> is a script for opening multiple other SimpleOpeners at once. This is intend for
+        things like double doors.</li>
+    
+    </ul>
+    
+    <p>All scripts are triggered by calling their Activate() method, though Open() and Close() methods can
+    also be called if you only want the door to move one way.</p>
+    
+    <h2>Using the Scripts</h2>
+    
+    <p>To use the scripts you will need a hierarchy of game objects in the prefab being opened.</p>
+    
+    <p>To create a door that swings on hinge or otherwise rotates open, you will need to a hinge transform
+    (usually an empty), which acts as the pivot around which the door will swing. This should usually be
+    on or just past the edge of the door and inline with any visible hinges in the model. The door 
+    <strong>must</strong> be a child of the hinge, and the script may be placed on the hinge or on a containing 
+    game object or empty.</p>
+
+     <table>
+        <tr>
+            <td> 
+            <p><img class="caverns_oe_hero" src="{{ url_for('static', filename='img/HingeOpenerInspector.png') }}" alt="Simple Modular Pillars with Other Creators Assets"></p>
+            </td>
+        </tr>
+    </table>
+
+    <p>The values in the script should be fairly self-explanitory: <strong>Hinge</strong> is the hinge transform. <strong>Axis Of
+    Rotation</strong> is the axis it will rotate through, usually Y for a door or gate, but might be X for a chest, while
+    a trapdoor might have X or Y depending on its orientation. <strong>Side</strong> is the side the door would be on if is
+    (or were) a double door, looking from the front; in effect, it is the side hinge is on relative to the door.
+    <strong>Close Angle</strong> is simply the angle the door should be at when closed, while <strong>Open Angle</strong> 
+    is the angle when fully open. Time To Open is simple the amount of time it will take to move from open to close
+    position or vice-versa. Finally, <strong>Open</strong> is simply if the door is currently open, and can be used to
+    configure that starting position of the door from the inspector.</p>
+    
+    <p>To create doors or gates that move to open, such as a portcullis that can be raised or lowered at the
+    entrance to a castle, use the Moving Opener script.</p>
+    
+     <table>
+        <tr>
+            <td> 
+            <p><img class="caverns_oe_hero" src="{{ url_for('static', filename='img/MovingOpenerInspector.png') }}" alt="Simple Modular Pillars with Other Creators Assets"></p>
+            </td>
+        </tr>
+    </table>
+
+    <p>The moving game object, the door or gate, need to be placed in a container with two empties positioned
+    where where the the game objects should be when open and when closed. The container may be an
+    empty or any object they are part of or attached to. The variable you need to set in the inspector are
+    those, plus Time To Open and Open, which work exactly the same way as with the hinged opener.</p>
+    
+    <p>The MultiOpener script simply inspector simply allows you to create list of other simple opens
+    (including hinge openers, moving openers, or even other multi-openers) that it will all be activated
+    when it is; it simply forwards the calls to Activate(), Open, and Closed() to any of the door openers in
+    its list.</p>
+    
+    <p>Calling Activate, Open, or Close from another script of with unity events wired in the inspector should
+    be all it takes to make it work. Of course, it could be used for more than just doors and gates – lids on
+    chests, or ever traps the swing a blade out or jab with something could also be animated with these
+    scripts.</p>
+    
+  
+  </section>
+{% endblock %}
