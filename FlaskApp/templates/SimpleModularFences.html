@@ -21,8 +21,8 @@
         <li>157 Models</li>
         <li>11 Textures</li>
         <li>6 Materials based on the standard metalicity workflow shader</li>
-        <li>Triangle count ranges between 12 and 3554, with most models having betwen 1k and 3k
-        UV Mapped</li>
+        <li>Triangle count ranges between 12 and 3554, with most models having betwen 1k and 3k</li>
+        <li>UV Mapped</li>
     </ul>
     
     <p>If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP version.</p>
@@ -31,41 +31,26 @@
     
     <p>A few naming conventions:</p>
      
-     <table>
-        <tr>
-            <td> 
-                <strong>Raw</strong> gates and doors are non-moving, and intended for use as decorations or non-openable
-                barriers. These come flagged as static.
-            </td>
-        </tr>
-        <tr>
-            <td>             
-                <strong>Openable</strong> gates and doors are just what they say; they are built as a nested hierarchy of game
-                objects and have a script attached that will open them when activated.
-            </td>
-        </tr>
-            <td>            
-                The suffix <strong>SA</strong> for <em>stand-alone</em> is for fence section with a post on both sides,
-                good for placing as on there own, such as to block a passage in a dungeon, or to close a loop of “trad” section.
-            </td>
-        </tr>
-        </tr>
-            <td>             
-                Sections suffixed with <strong>Trad</trad> are for building fences in the traditional way, by inserting the the
-                end with no post into the post at the beginning of the next. Thus, they only have a post at one
-                end and the other end is slightly longer to provide for insertion.
-            </td>
-        </tr>
-        </tr>
-            <td>             
-                Section labeled with <strong>W</strong> (for <em>“whole"</em>) have a half-post split exactly in 
-                half at each end, to be “snapped” next to each other like walls. These were originally intended for 
-                use with a specific tool asset that sadly has become broken abandon-ware, but they could still be 
-                used as normal assets if you prefer to build in this way.
-            </td>
-        </tr>
-    </table>
-    
+    <ul>
+        <li><strong>Raw</strong> gates and doors are non-moving, and intended for use as decorations or non-openable
+        barriers. These come flagged as static.</li>
+        
+        <li><strong>Openable</strong> gates and doors are just what they say; they are built as a nested hierarchy of game
+        objects and have a script attached that will open them when activated.</li>
+        
+        <li>The suffix <strong>SA</strong> for <em>stand-alone</em> is for fence section with a post on both sides,
+        good for placing as on there own, such as to block a passage in a dungeon, or to close a loop of “trad” section.</li>
+        
+        <li>Sections suffixed with <strong>Trad</strong> are for building fences in the traditional way, by inserting the the
+        end with no post into the post at the beginning of the next. Thus, they only have a post at one
+        end and the other end is slightly longer to provide for insertion.</li>
+        
+        <li>Section labeled with <strong>W</strong> (for <em>“whole"</em>) have a half-post split exactly in 
+        half at each end, to be “snapped” next to each other like walls. These were originally intended for 
+        use with a specific tool asset that sadly has become broken abandon-ware, but they could still be 
+        used as normal assets if you prefer to build in this way.</li>
+    </ul>
+                
     <h2>Materials and Textures</h2>
     
     <p>In addition to the textures and materials used on the existing prefabs, extra materials are provided for
@@ -84,7 +69,7 @@
 
     <ul>
         
-        </li><strong>IDoorOpener.cs</strong> is the base interface defining the core methods for opening door; only useful if
+        <li><strong>IDoorOpener.cs</strong> is the base interface defining the core methods for opening door; only useful if
         you are a programmer want to extend the system with more way to move doors.</li>
 
         </li><strong>SimpleOpener.cs</strong> is am abstract base class that applies the IDoorOpener interface to a
@@ -157,6 +142,9 @@
     be all it takes to make it work. Of course, it could be used for more than just doors and gates – lids on
     chests, or ever traps the swing a blade out or jab with something could also be animated with these
     scripts.</p>
+    
+      
+    <p><br style="text-align: right; text-indent: 64px;"/><h2><i><u>Coming Soon to the Unity Asset Store</i></u></h2></p>
     
   
   </section>
