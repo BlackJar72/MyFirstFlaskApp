@@ -1,5 +1,6 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_mail import Mail, Message
+from flask_mobility import Mobility
 import sys, os
 
 '''
@@ -77,20 +78,20 @@ def underConstruction():
 
 @app.route('/')
 def homepage():
-    return render_template('main.html')
+  return render_template('main.html')
 #  return render_template("404.html")
 
 
 @app.route('/projects/')
 def projpage():
-    return render_template('projects.html')
+  return render_template('projects.html')
 #  return render_template("404.html")
 
 
 @app.route('/CavernsOfEvil/')
 def cavernspage():
 #    return redirect(url_for('projpage',_anchor='games'))
-  return render_template("CavernsOfEvil.html")
+  return render_template('CavernsOfEvil.html')
 
 
 @app.route('/SimpleModularPillars/')
