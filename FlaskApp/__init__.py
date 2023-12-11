@@ -1,6 +1,5 @@
 from flask import Flask, render_template, redirect, url_for, request
 from flask_mail import Mail, Message
-from flask_mobility import Mobility
 import sys, os
 
 '''
