@@ -11,7 +11,7 @@
     
     <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/ao4D8sNcVMA?si=maoavDQXq3EKIs6R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
   
-    <p>SImple Modular Fences is a contains various types of wood, metal, and stone fences, along with gate for those fences, and some cage walls (which are pretty similar to fences).  Variants are include for most types to fit different workflows.  In addition to the fences themselves you get posts, slats, and bars related to those fence.  Also included are gates, scripts to open gates and doors, and a couple bonus materials.</p>
+    <p>Simple Modular Fences is a contains various types of wood, metal, and stone fences, along with gate for those fences, and some cage walls (which are pretty similar to fences).  Variants are include for most types to fit different workflows.  In addition to the fences themselves you get posts, slats, and bars related to those fence.  Also included are gates, scripts to open gates and doors, and a couple bonus materials.</p>
     
     <p>The models are basic modular place, to place in a scene. If you know how to build with scene view in
     the editor, you know how to use these. They should work with any third party tools that can place
@@ -25,9 +25,9 @@
         <li>UV Mapped</li>
     </ul>
     
-    <p>If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP version.</p>
+    <p>If you are using URP (and don’t know how to convert the standard materials on your own) the URP folder contains a package that will replace the materials with URP versions.</p>
     
-    <p>No rigging or animations, but scripts are included to animate openable gates through transforms.  These include three scripts that may be applied to game objects, a base class, and an interface.</p>
+    <p>Nothing is rigged and no animations are included, but scripts are included to animate openable gates through transforms.  These include three scripts that may be applied to game objects, a base class, and an interface.</p>
     
     <p>A few naming conventions:</p>
      
@@ -72,7 +72,7 @@
         <li><strong>IDoorOpener.cs</strong> is the base interface defining the core methods for opening door; only useful if
         you are a programmer want to extend the system with more way to move doors.</li>
 
-        </li><strong>SimpleOpener.cs</strong> is am abstract base class that applies the IDoorOpener interface to a
+        <li><strong>SimpleOpener.cs</strong> is am abstract base class that applies the IDoorOpener interface to a
         MonoBehaviour, needed because variables assigned to interfaces don’t show in the inspector;
         also really on important for programmers want to extend the system.</li>
         
@@ -94,7 +94,7 @@
     
     <p>To use the scripts you will need a hierarchy of game objects in the prefab being opened.</p>
     
-    <p>To create a door that swings on hinge or otherwise rotates open, you will need to a hinge transform
+    <p>To create a door that swings on a hinge or otherwise rotates open, you will need to a hinge transform
     (usually an empty), which acts as the pivot around which the door will swing. This should usually be
     on or just past the edge of the door and inline with any visible hinges in the model. The door 
     <strong>must</strong> be a child of the hinge, and the script may be placed on the hinge or on a containing 
@@ -113,7 +113,7 @@
     a trapdoor might have X or Y depending on its orientation. <strong>Side</strong> is the side the door would be on if is
     (or were) a double door, looking from the front; in effect, it is the side hinge is on relative to the door.
     <strong>Close Angle</strong> is simply the angle the door should be at when closed, while <strong>Open Angle</strong> 
-    is the angle when fully open. Time To Open is simple the amount of time it will take to move from open to close
+    is the angle when fully open. <strong>Time To Open</strong> is simply the amount of time it will take to move from open to close
     position or vice-versa. Finally, <strong>Open</strong> is simply if the door is currently open, and can be used to
     configure that starting position of the door from the inspector.</p>
     
@@ -128,17 +128,17 @@
         </tr>
     </table>
 
-    <p>The moving game object, the door or gate, need to be placed in a container with two empties positioned
-    where where the the game objects should be when open and when closed. The container may be an
+    <p>The moving game object, the door or gate, needs to be placed in a container with two empties positioned
+    where where the game objects should be when open and when closed. The container may be an
     empty or any object they are part of or attached to. The variable you need to set in the inspector are
     those, plus Time To Open and Open, which work exactly the same way as with the hinged opener.</p>
     
-    <p>The MultiOpener script simply inspector simply allows you to create list of other simple opens
+    <p>The MultiOpener script simply allows you to create lisst of other simple opens
     (including hinge openers, moving openers, or even other multi-openers) that it will all be activated
-    when it is; it simply forwards the calls to Activate(), Open, and Closed() to any of the door openers in
+    when it is; it simply forwards the calls to Activate(), Open(), and Closed() to any of the door openers in
     its list.</p>
     
-    <p>Calling Activate, Open, or Close from another script of with unity events wired in the inspector should
+    <p>Calling Activate, Open, or Close from another script or with unity events wired in the inspector should
     be all it takes to make it work. Of course, it could be used for more than just doors and gates – lids on
     chests, or ever traps the swing a blade out or jab with something could also be animated with these
     scripts.</p>
