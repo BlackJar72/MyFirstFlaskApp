@@ -105,6 +105,22 @@ def fencesspage():
   return render_template("SimpleModularFences.html")
 
 
+@app.route('/TableTop/')
+def cavernspage():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template('TableTop.html')
+
+
+@app.route('/CastleVanWeb/')
+def cavernspage():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template('pdf/CastleVanWebb-2021.pdf')
+
+@app.route('/SkirfirsMine/')
+def cavernspage():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template('pdf/SkirfirsMine.pdf')
+
 @app.route('/games/')
 def gamespage():
 #    return redirect(url_for('projpage',_anchor='games'))
