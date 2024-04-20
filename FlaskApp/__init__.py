@@ -111,15 +111,15 @@ def table_top_page():
   return render_template('TableTop.html')
 
 
-@app.route('/CastleVanWeb/')
-def van_webb_spage():
-#    return redirect(url_for('projpage',_anchor='games'))
-  return render_template('pdf/CastleVanWebb-2021.pdf')
-
-@app.route('/SkirfirsMine/')
-def skirfirs_mine_page():
-#    return redirect(url_for('projpage',_anchor='games'))
-  return render_template('pdf/SkirfirsMine.pdf')
+#@app.route('/CastleVanWeb/')
+#def van_webb_spage():
+##    return redirect(url_for('projpage',_anchor='games'))
+#  return render_template('pdf/CastleVanWebb-2021.pdf')
+#
+#@app.route('/SkirfirsMine/')
+#def skirfirs_mine_page():
+##    return redirect(url_for('projpage',_anchor='games'))
+#  return render_template('pdf/SkirfirsMine.pdf')
 
 @app.route('/games/')
 def gamespage():
