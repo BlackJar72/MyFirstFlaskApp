@@ -106,18 +106,18 @@ def fencesspage():
 
 
 @app.route('/TableTop/')
-def cavernspage():
+def table_top_page():
 #    return redirect(url_for('projpage',_anchor='games'))
   return render_template('TableTop.html')
 
 
 @app.route('/CastleVanWeb/')
-def cavernspage():
+def van_webb_spage():
 #    return redirect(url_for('projpage',_anchor='games'))
   return render_template('pdf/CastleVanWebb-2021.pdf')
 
 @app.route('/SkirfirsMine/')
-def cavernspage():
+def skirfirs_mine_page():
 #    return redirect(url_for('projpage',_anchor='games'))
   return render_template('pdf/SkirfirsMine.pdf')
 
