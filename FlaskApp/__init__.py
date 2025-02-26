@@ -99,6 +99,12 @@ def pillarspage():
   return render_template("SimpleModularPillars.html")
 
 
+@app.route('/CastleVanWebb/')
+def castlevanwebb():
+#    return redirect(url_for('projpage',_anchor='games'))
+  return render_template("CastleVanWebbAsset.html")
+
+
 @app.route('/SimpleModularFences/')
 def fencesspage():
 #    return redirect(url_for('projpage',_anchor='games'))

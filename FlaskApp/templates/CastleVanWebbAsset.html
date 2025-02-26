@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Welcome to KnightFerret Software{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block body %}
+  <section class="my_main_section">
+    
+    <H1>Castle van Webb: Modular Stylized Castles and Dungeons</H1>
+    
+    <div class="video-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/GVANlYdHjuA?si=02HpjseoXiQVpmtr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+  
+    <p>This asset includes everything your need to start building awesome dungeons, castles, villages, and ruins, as well as related items such as weapons and tools. With over 1500 prefabs, this should give you everything you need to start making a medieval or fantasy themed game. The number is expected to grow with future updates, as more ideas come to mind. It is hoped that as this grows it will be possible to make something on the scale of a full open world RPG using this asset for all items and props, and with the memory usage of a retro game.</p>
+
+    <p><i>See the full documentation: <a href="{{ url_for('static', filename='files/CastleVanWebbAsset-Documentation.pdf') }}">full documentation</a>
+    for more information on the model types and details about the scripts.</i></p>
+    
+    <p>Everything is mildly stylized with generally realistic shapes and sizes but a cartoony aesthetic, and with props all designed around a consistent color palette. Objects, though stylized and mapped to a palette can also be metallic, emissive, or translucent. If this PBR rendition isn’t what you’re looking for, these models work great with toon shaders such as RealToon and Flat Kit, especially if screen space post processing such as Clean Outline are used for the outlining.</p>
+
+    <p>As an added benefit, the palette based system also allows for a small memory and disk space foot print, allowing for big games to come in small packages (though it would be great for a small game, too).</p>
+
+    <p>As an added bonus, this also comes a scripts for various uses, notably opening doors and other objects (or just moving a game object in some set way). This even includes a complete health, armor, and damage system, as well as some scripts with less common uses but which some may find handy. These scipts are largely a free bonus, beyond the core asset.</p>
+
+    <p><br style="text-align: right; text-indent: 64px;"/><h2><a href="https://assetstore.unity.com/packages/3d/environments/dungeons/castle-van-webb-modular-stylized-castles-and-dungeons-311636"><i><u>Get Castle van Webb: Modular Stylized Castles and Dungeons on the Unity Asset Store</u></i></a></h2></br></p>
+  
+  </section>
+{% endblock %}
