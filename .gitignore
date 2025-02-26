@@ -4,4 +4,5 @@ dat
 log
 .directory
 __pycache__
+*.kate-swp
 
