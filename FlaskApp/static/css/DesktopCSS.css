@@ -46,6 +46,7 @@ h1.my_navbar {
 li.my_navbar {
     list-style-type: none;
     background-color: #303048;
+    background-color: #C0C8ff;
     display: inline;
     padding: 4px;
     margin: 0px;
